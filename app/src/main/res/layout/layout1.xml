@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white">
+<TableLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TableRow>
+        <TextView />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_weight="2"
+            android:gravity="center_vertical|left"
+            android:text="所选地址："
+            android:textSize="20dp"/>
+        <TextView
+            android:id="@+id/dizhi"
+            android:layout_height="80dp"
+            android:layout_width="wrap_content"
+            android:layout_weight="8"
+            android:text="数据库内容"
+            android:textSize="20dp"/>
+    </TableRow>
+    <TableRow>
+        <TextView />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_weight="2"
+            android:gravity="center_vertical|left"
+            android:text="简介："
+            android:textSize="20dp"/>
+        <TextView
+            android:id="@+id/jianjie"
+            android:layout_height="80dp"
+            android:layout_width="wrap_content"
+            android:layout_weight="8"
+            android:text="数据库内容"
+            android:textSize="20dp"/>
+    </TableRow>
+    <TableRow>
+        <TextView />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_weight="2"
+            android:gravity="center_vertical|left"
+            android:text="特色风味："
+            android:textSize="20dp"/>
+        <TextView
+            android:id="@+id/fengwei"
+            android:layout_height="80dp"
+            android:layout_width="wrap_content"
+            android:layout_weight="8"
+            android:text="数据库内容"
+            android:textSize="20dp"/>
+    </TableRow>
+    <TableRow>
+        <TextView />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_weight="2"
+            android:gravity="center_vertical|left"
+            android:text="最佳旅游时间："
+            android:textSize="20dp"/>
+        <TextView
+            android:id="@+id/shijian"
+            android:layout_height="80dp"
+            android:layout_width="wrap_content"
+            android:layout_weight="8"
+            android:text="数据库内容"
+            android:textSize="20dp"/>
+    </TableRow>
+    <TableRow>
+        <TextView />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_weight="2"
+            android:gravity="center_vertical|left"
+            android:text="口碑网评："
+            android:textSize="20dp"/>
+        <TextView
+            android:id="@+id/koubei"
+            android:layout_height="80dp"
+            android:layout_width="wrap_content"
+            android:layout_weight="8"
+            android:text="数据库内容"
+            android:textSize="20dp"/>
+    </TableRow>
+</TableLayout>
+
+</RelativeLayout>
