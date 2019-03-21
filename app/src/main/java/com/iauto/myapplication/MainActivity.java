@@ -49,36 +49,24 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         hideAllFragment(fTransaction);
         switch (checkedId){
             case R.id.rb_channel:
-                if(fg1 == null){
-                    fg1 = new Fragment1();
-                    fTransaction.add(R.id.ly_content,fg1);
-                }else{
-                    fTransaction.show(fg1);
-                }
+                fg1 = null;
+                fg1 = new Fragment1();
+                fTransaction.add(R.id.ly_content,fg1);
                 break;
             case R.id.rb_message:
-                if(fg2 == null){
-                    fg2 = new Fragment2();
-                    fTransaction.add(R.id.ly_content,fg2);
-                }else{
-                    fTransaction.show(fg2);
-                }
+                fg2 = null;
+                fg2 = new Fragment2();
+                fTransaction.add(R.id.ly_content,fg2);
                 break;
             case R.id.rb_better:
-                if(fg3 == null){
-                    fg3 = new Fragment3();
-                    fTransaction.add(R.id.ly_content,fg3);
-                }else{
-                    fTransaction.show(fg3);
-                }
+                fg3 = null;
+                fg3 = new Fragment3();
+                fTransaction.add(R.id.ly_content,fg3);
                 break;
             case R.id.rb_setting:
-                if(fg4 == null){
-                    fg4 = new Fragment4();
-                    fTransaction.add(R.id.ly_content,fg4);
-                }else{
-                    fTransaction.show(fg4);
-                }
+                fg4 = null;
+                fg4 = new Fragment4();
+                fTransaction.add(R.id.ly_content,fg4);
                 break;
         }
         fTransaction.commit();

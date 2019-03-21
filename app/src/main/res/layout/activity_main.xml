@@ -23,9 +23,9 @@
             android:textSize="18sp" />
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="点击查询"/>
+            android:text="查询"/>
 
 
         <View

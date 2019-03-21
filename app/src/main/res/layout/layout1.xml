@@ -3,6 +3,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_white">
+
 <TableLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
@@ -75,7 +76,9 @@
             android:textSize="20dp"/>
     </TableRow>
     <TableRow>
-        <TextView />
+        <TextView
+            android:gravity="center_vertical|left"
+            ></TextView>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="80dp"
@@ -91,6 +94,7 @@
             android:text="数据库内容"
             android:textSize="20dp"/>
     </TableRow>
+
 </TableLayout>
 
 </RelativeLayout>
