@@ -16,7 +16,7 @@ public class Fragment1 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.layout1,container,false);
         TextView textView1 = view.findViewById(R.id.dizhi);
-        textView1.setText("123456");
+        textView1.setText("MySql数据库内容");
 
         return view;
     }
