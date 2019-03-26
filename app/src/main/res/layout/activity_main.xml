@@ -48,25 +48,25 @@
         android:orientation="horizontal">
 
         <RadioButton
-            android:id="@+id/rb_channel"
+            android:id="@+id/jingdian"
             style="@style/tab_menu_item"
             android:drawableTop="@drawable/tab_menu_channel"
             android:text="@string/tab_menu_alert" />
 
         <RadioButton
-            android:id="@+id/rb_message"
+            android:id="@+id/jiaotong"
             style="@style/tab_menu_item"
             android:drawableTop="@drawable/tab_menu_message"
             android:text="@string/tab_menu_profile" />
 
         <RadioButton
-            android:id="@+id/rb_better"
+            android:id="@+id/jiudian"
             style="@style/tab_menu_item"
             android:drawableTop="@drawable/tab_menu_better"
             android:text="@string/tab_menu_pay" />
 
         <RadioButton
-            android:id="@+id/rb_setting"
+            android:id="@+id/zhoubian"
             style="@style/tab_menu_item"
             android:drawableTop="@drawable/tab_menu_setting"
             android:text="@string/tab_menu_setting"/>
@@ -81,7 +81,7 @@
         android:background="@color/div_white" />
 
     <LinearLayout
-        android:id="@+id/ly_content"
+        android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/div_tab_bar"

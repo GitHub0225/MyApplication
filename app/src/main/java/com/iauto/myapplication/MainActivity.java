@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         rg_tab_bar = (RadioGroup) findViewById(R.id.rg_tab_bar);
         rg_tab_bar.setOnCheckedChangeListener(this);
         //获取第一个单选按钮，并设置其为选中状态
-        rb_channel = (RadioButton) findViewById(R.id.rb_channel);
+        rb_channel = (RadioButton) findViewById(R.id.jingdian);
         rb_channel.setChecked(true);
     }
 
@@ -50,26 +50,26 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         FragmentTransaction fTransaction = fManager.beginTransaction();
         hideAllFragment(fTransaction);
         switch (checkedId){
-            case R.id.rb_channel:
+            case R.id.jingdian:
                 fg1 = null;
                 fg1 = new Fragment1();
-                fTransaction.replace(R.id.ly_content,fg1);
+                fTransaction.replace(R.id.content,fg1);
                 break;
-            case R.id.rb_message:
+            case R.id.jiaotong:
                 fg2 = null;
                 fg2 = new Fragment2();
-                fTransaction.replace(R.id.ly_content,fg2);
+                fTransaction.replace(R.id.content,fg2);
                 break;
-            case R.id.rb_better:
+            case R.id.jiudian:
                 fg3 = null;
                 fg3 = new Fragment3();
                 getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-                fTransaction.replace(R.id.relay,fg3);
+                fTransaction.replace(R.id.relay,fg3);//在RelativeLayout中放置
                 break;
-            case R.id.rb_setting:
+            case R.id.zhoubian:
                 fg4 = null;
                 fg4 = new Fragment4();
-                fTransaction.replace(R.id.ly_content,fg4);
+                fTransaction.replace(R.id.content,fg4);
                 break;
         }
         fTransaction.commit();
