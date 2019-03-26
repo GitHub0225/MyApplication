@@ -78,12 +78,13 @@
         android:layout_above="@id/rg_tab_bar"
         android:background="@color/div_white" />
 
-    <FrameLayout
+    <LinearLayout
         android:id="@+id/ly_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/div_tab_bar"
-        android:layout_below="@id/ly_top_bar"></FrameLayout>
+        android:layout_below="@id/ly_top_bar"
+        android:clickable="true"></LinearLayout>
 
 
 </RelativeLayout>

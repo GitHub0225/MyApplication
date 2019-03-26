@@ -9,18 +9,17 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.baidu.mapapi.map.MapView;
 import com.iauto.myapplication.R;
 
 public class Fragment3 extends Fragment {
-    private String[] array = {"2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2",};
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.layout2,container,false);
-        ListView listView = (ListView) view.findViewById(R.id.list);
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String >(getContext(),android.R.layout.simple_list_item_1,array);
-        listView.setAdapter(arrayAdapter);
+        View view = inflater.inflate(R.layout.layout3,container,false);
+        MapView mapView = (MapView) view.findViewById(R.id.bmapView);
 
         return view;
     }
 }
+// Cause when it all falls down,then whatever.

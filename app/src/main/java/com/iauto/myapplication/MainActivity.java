@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
     }
 
 
+
     @Override
     public void onCheckedChanged(RadioGroup group, int checkedId) {
         FragmentTransaction fTransaction = fManager.beginTransaction();
@@ -51,22 +52,22 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
             case R.id.rb_channel:
                 fg1 = null;
                 fg1 = new Fragment1();
-                fTransaction.add(R.id.ly_content,fg1);
+                fTransaction.replace(R.id.ly_content,fg1);
                 break;
             case R.id.rb_message:
                 fg2 = null;
                 fg2 = new Fragment2();
-                fTransaction.add(R.id.ly_content,fg2);
+                fTransaction.replace(R.id.ly_content,fg2);
                 break;
             case R.id.rb_better:
                 fg3 = null;
                 fg3 = new Fragment3();
-                fTransaction.add(R.id.ly_content,fg3);
+                fTransaction.replace(R.id.ly_content,fg3);
                 break;
             case R.id.rb_setting:
                 fg4 = null;
                 fg4 = new Fragment4();
-                fTransaction.add(R.id.ly_content,fg4);
+                fTransaction.replace(R.id.ly_content,fg4);
                 break;
         }
         fTransaction.commit();
