@@ -4,6 +4,7 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.WindowManager;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
@@ -62,7 +63,8 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
             case R.id.rb_better:
                 fg3 = null;
                 fg3 = new Fragment3();
-                fTransaction.replace(R.id.ly_content,fg3);
+                getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+                fTransaction.replace(R.id.relay,fg3);
                 break;
             case R.id.rb_setting:
                 fg4 = null;
