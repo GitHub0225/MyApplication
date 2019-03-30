@@ -1,5 +1,6 @@
 package com.iauto.myapplication.Fragment;
 
+import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.os.Handler;
@@ -22,11 +23,11 @@ import java.io.PrintStream;
 import java.net.Socket;
 
 public class Fragment1 extends Fragment {
+    private String content;
     private HandlerThread mReceiverHandlerThread;
     private Handler mReceiverHandler;
     private HandlerThread mSendHandlerThread;
     private Handler mSendHander;
-    private Handler handler;
     private View view;
     private String string;
     private String[] parts;
@@ -36,18 +37,22 @@ public class Fragment1 extends Fragment {
     private TextView textView3;
     private TextView textView4;
     private TextView textView5;
-    private Button button;
-    private EditText editText;
     private int flag;
     private Socket socket;
+
+    @SuppressLint("ValidFragment")
+    public Fragment1(String content) {
+        this.content = content;
+    }
+
+    public Fragment1() {
+    }
 
 
 
     @Override
     public View onCreateView(final LayoutInflater inflater, final ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.layout1, container, false);
-        button = view.findViewById(R.id.button);
-        editText = view.findViewById(R.id.editText);
         textView1 = view.findViewById(R.id.dizhi);
         textView2 = view.findViewById(R.id.jianjie);
         textView3 = view.findViewById(R.id.fengwei);
@@ -62,38 +67,25 @@ public class Fragment1 extends Fragment {
         mReceiverHandlerThread.start();
         mReceiverHandler = new Handler(mReceiverHandlerThread.getLooper(), new ReceiverMessageCallback());
 
-        mReceiverHandler.sendEmptyMessage(0);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mSendHander.sendEmptyMessage(0);
-            }
-        });
+        mSendHander.sendEmptyMessage(0);
 
-        handler = new Handler() {
-            @Override
-            public void handleMessage(Message msg) {
-                super.handleMessage(msg);
-                textView1.setText(parts[0]);
-                textView2.setText(parts[1]);
-                textView3.setText(parts[2]);
-                textView4.setText(parts[3]);
-                textView5.setText(parts[4]);
-                flag = 1;
-            }
-        };
+
 
         while (flag == 0){
             try {
-                System.out.println(flag);
-                Thread.sleep(500);
+                Thread.sleep(100);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
-
+        textView1.setText(parts[0]);
+        textView2.setText(parts[1]);
+        textView3.setText(parts[2]);
+        textView4.setText(parts[3]);
+        textView5.setText(parts[4]);
         flag = 0;
        return view;
+
 
 
     }
@@ -107,7 +99,7 @@ public class Fragment1 extends Fragment {
                 bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                 string = bufferedReader.readLine();
                 parts = string.split("_");
-                handler.sendEmptyMessage(0);
+                flag = 1;
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -121,26 +113,26 @@ public class Fragment1 extends Fragment {
     private class SendMessageCallback implements Handler.Callback {
         @Override
         public boolean handleMessage(Message message) {
-            String text = editText.getText().toString();
-            if(text!=null){
-                try{
-                    ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(text.getBytes("utf-8"));
-                    OutputStream outputStream=socket.getOutputStream();
-                    byte[] buf=new byte[1024];
-                    int len;
-                    while((len=byteArrayInputStream.read(buf))!=-1){
-                        outputStream.write(buf, 0, len);
-                    }
-                    //刷新一下缓冲区的数据
-                    outputStream.flush();
-                    //告诉服务器，我的数据已经发送完了
-                    socket.shutdownOutput();
-                    mReceiverHandler.sendEmptyMessage(0);
-
-                }catch (Exception e){
-                    e.printStackTrace();
-                }
-            }
+//            if(content!=null){
+//                try{
+//                    ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(content.getBytes("utf-8"));
+//                    OutputStream outputStream=socket.getOutputStream();
+//                    byte[] buf=new byte[1024];
+//                    int len;
+//                    while((len=byteArrayInputStream.read(buf))!=-1){
+//                        outputStream.write(buf, 0, len);
+//                    }
+//                    //刷新一下缓冲区的数据
+//                    outputStream.flush();
+//                    //告诉服务器，我的数据已经发送完了
+//                    socket.shutdownOutput();
+//                    mReceiverHandler.sendEmptyMessage(0);
+//
+//                }catch (Exception e){
+//                    e.printStackTrace();
+//                }
+//            }
+            mReceiverHandler.sendEmptyMessage(0);
             return false;
         }
     }
