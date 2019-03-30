@@ -2,6 +2,7 @@ package com.iauto.myapplication;
 
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.WindowManager;
@@ -19,8 +20,8 @@ import com.iauto.myapplication.Fragment.Fragment4;
  */
 public class MainActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener{
 
-    private RadioGroup rg_tab_bar;
-    private RadioButton rb_channel;
+    private RadioGroup radioGroup;
+    private RadioButton radioButton;
 
     //Fragment Object
 
@@ -36,11 +37,11 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         fManager = getFragmentManager();
-        rg_tab_bar = (RadioGroup) findViewById(R.id.rg_tab_bar);
-        rg_tab_bar.setOnCheckedChangeListener(this);
+        radioGroup = (RadioGroup) findViewById(R.id.RadioGroup);
+        radioGroup.setOnCheckedChangeListener(this);
         //获取第一个单选按钮，并设置其为选中状态
-        rb_channel = (RadioButton) findViewById(R.id.jingdian);
-        rb_channel.setChecked(true);
+        radioButton = (RadioButton) findViewById(R.id.jiaotong);
+        radioButton.setChecked(true);
     }
 
 

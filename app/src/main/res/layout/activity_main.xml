@@ -6,41 +6,12 @@
     android:background="@color/bg_gray">
 
 
-    <LinearLayout
-        android:id="@+id/ly_top_bar"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:background="@color/bg_topbar"
-        android:orientation="horizontal">
-
-        <EditText
-            android:id="@+id/txt_topbar"
-            android:layout_width="300sp"
-            android:layout_height="match_parent"
-            android:layout_centerInParent="true"
-            android:hint="请在此输入"
-            android:textColor="@color/text_topbar"
-            android:textSize="18sp" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="查询"/>
 
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2px"
-            android:layout_alignParentBottom="true"
-            android:background="@color/div_white" />
-
-    </LinearLayout>
 
 
     <RadioGroup
-        android:id="@+id/rg_tab_bar"
+        android:id="@+id/RadioGroup"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_alignParentBottom="true"
@@ -77,7 +48,7 @@
         android:id="@+id/div_tab_bar"
         android:layout_width="match_parent"
         android:layout_height="2px"
-        android:layout_above="@id/rg_tab_bar"
+        android:layout_above="@id/RadioGroup"
         android:background="@color/div_white" />
 
     <LinearLayout
