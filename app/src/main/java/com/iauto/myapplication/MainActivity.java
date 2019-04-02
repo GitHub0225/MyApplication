@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
     private Fragment2 fg2;
     private Fragment3 fg3;
     private Fragment4 fg4;
+    private EditText editText;
     private Button button;
     private FragmentManager fManager;
 
@@ -45,6 +47,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         //获取第一个单选按钮，并设置其为选中状态
         radioButton = (RadioButton) findViewById(R.id.jiaotong);
         radioButton.setChecked(true);
+        editText = findViewById(R.id.editText);
 
         button = findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
@@ -54,11 +57,15 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
                 switch (FLAG){
                     case 1:
                         fg1 = null;
-                        fg1 = new Fragment1("123");
-                        FLAG = 1;
+                        fg1 = new Fragment1(editText.getText().toString());
                         fTransaction = fManager.beginTransaction();
                         fTransaction.replace(R.id.content,fg1);
                         break;
+                    case 2:
+                        fg2 = null;
+                        fg2 = new Fragment2();
+                        fTransaction = fManager.beginTransaction();
+                        fTransaction.replace(R.id.content,fg2);
                     default:
                         break;
                 }

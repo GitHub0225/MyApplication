@@ -9,23 +9,17 @@ import android.os.Message;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import com.iauto.myapplication.R;
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
-import java.io.PrintStream;
 import java.net.Socket;
 
 public class Fragment1 extends Fragment {
     private String content;
-    private HandlerThread mReceiverHandlerThread;
-    private Handler mReceiverHandler;
     private HandlerThread mSendHandlerThread;
     private Handler mSendHander;
     private View view;
@@ -63,10 +57,6 @@ public class Fragment1 extends Fragment {
         mSendHandlerThread.start();
         mSendHander = new Handler(mSendHandlerThread.getLooper(), new SendMessageCallback());
 
-        mReceiverHandlerThread = new HandlerThread("Receiver");
-        mReceiverHandlerThread.start();
-        mReceiverHandler = new Handler(mReceiverHandlerThread.getLooper(), new ReceiverMessageCallback());
-
         mSendHander.sendEmptyMessage(0);
 
 
@@ -84,55 +74,52 @@ public class Fragment1 extends Fragment {
         textView4.setText(parts[3]);
         textView5.setText(parts[4]);
         flag = 0;
-       return view;
+        return view;
 
 
 
     }
-    private class ReceiverMessageCallback implements Handler.Callback {
-        @Override
-        public boolean handleMessage(Message msg) {
 
-            try {
-                socket = new Socket("101.132.176.85", 30000);
-
-                bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-                string = bufferedReader.readLine();
-                parts = string.split("_");
-                flag = 1;
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-
-            return false;
-        }
-
-    }
 
     private class SendMessageCallback implements Handler.Callback {
         @Override
         public boolean handleMessage(Message message) {
-//            if(content!=null){
-//                try{
-//                    ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(content.getBytes("utf-8"));
-//                    OutputStream outputStream=socket.getOutputStream();
-//                    byte[] buf=new byte[1024];
-//                    int len;
-//                    while((len=byteArrayInputStream.read(buf))!=-1){
-//                        outputStream.write(buf, 0, len);
-//                    }
-//                    //刷新一下缓冲区的数据
-//                    outputStream.flush();
-//                    //告诉服务器，我的数据已经发送完了
-//                    socket.shutdownOutput();
-//                    mReceiverHandler.sendEmptyMessage(0);
-//
-//                }catch (Exception e){
-//                    e.printStackTrace();
-//                }
-//            }
-            mReceiverHandler.sendEmptyMessage(0);
+            if(content!=null){
+                try{
+                    socket = new Socket("101.132.176.85", 30000);
+                    ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(content.getBytes("utf-8"));
+                    OutputStream outputStream=socket.getOutputStream();
+                    byte[] buf=new byte[1024];
+                    int len;
+                    while((len=byteArrayInputStream.read(buf))!=-1){
+                        outputStream.write(buf, 0, len);
+                    }
+                    //刷新一下缓冲区的数据
+                    outputStream.flush();
+                    //告诉服务器，我的数据已经发送完了
+                    socket.shutdownOutput();
+
+                    bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+                    string = bufferedReader.readLine();
+                    parts = string.split("_");
+                    flag = 1;
+
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+            }
+            if(content == null){
+                try {
+                    socket = new Socket("101.132.176.85", 30000);
+                    bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+                    string = bufferedReader.readLine();
+                    parts = string.split("_");
+                    flag = 1;
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+            }
             return false;
         }
     }
