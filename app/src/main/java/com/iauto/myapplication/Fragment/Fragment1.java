@@ -13,13 +13,13 @@ import android.widget.TextView;
 import com.iauto.myapplication.R;
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.Socket;
 
 public class Fragment1 extends Fragment {
-    private String content;
+    //创建Fragment默认显示北京的信息。
+    private String content = "北京";
     private HandlerThread mSendHandlerThread;
     private Handler mSendHander;
     private View view;
@@ -40,9 +40,8 @@ public class Fragment1 extends Fragment {
     }
 
     public Fragment1() {
+
     }
-
-
 
     @Override
     public View onCreateView(final LayoutInflater inflater, final ViewGroup container, Bundle savedInstanceState) {
@@ -63,6 +62,7 @@ public class Fragment1 extends Fragment {
 
         while (flag == 0){
             try {
+                System.out.println("waiting");
                 Thread.sleep(100);
             } catch (InterruptedException e) {
                 e.printStackTrace();
@@ -84,7 +84,7 @@ public class Fragment1 extends Fragment {
     private class SendMessageCallback implements Handler.Callback {
         @Override
         public boolean handleMessage(Message message) {
-            if(content!=null){
+
                 try{
                     socket = new Socket("101.132.176.85", 30000);
                     ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(content.getBytes("utf-8"));
@@ -103,23 +103,12 @@ public class Fragment1 extends Fragment {
                     string = bufferedReader.readLine();
                     parts = string.split("_");
                     flag = 1;
-
+                    System.out.println(content+"-----------------------------");
                 }catch (Exception e){
                     e.printStackTrace();
                 }
-            }
-            if(content == null){
-                try {
-                    socket = new Socket("101.132.176.85", 30000);
-                    bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-                    string = bufferedReader.readLine();
-                    parts = string.split("_");
-                    flag = 1;
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
 
-            }
+
             return false;
         }
     }

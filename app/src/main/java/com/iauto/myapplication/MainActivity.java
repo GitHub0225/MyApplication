@@ -1,12 +1,12 @@
 package com.iauto.myapplication;
 
+import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.content.Intent;
+import android.content.Context;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -21,8 +21,7 @@ import com.iauto.myapplication.Fragment.Fragment4;
 /**
  * Created by Coder-pig on 2015/8/29 0028.
  */
-public class MainActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener{
-
+public class MainActivity extends Activity implements RadioGroup.OnCheckedChangeListener{
     private RadioGroup radioGroup;
     private RadioButton radioButton;
     private int FLAG;
@@ -53,6 +52,9 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //点击按钮之后隐藏键盘
+                InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(getWindow().getDecorView().getWindowToken(), 0);
                 System.out.println(FLAG);
                 switch (FLAG){
                     case 1:
@@ -97,7 +99,6 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
                 fg3 = null;
                 fg3 = new Fragment3();
                 FLAG = 3;
-                getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
                 fTransaction.replace(R.id.relay,fg3);//在RelativeLayout中放置
                 break;
             case R.id.zhoubian:
