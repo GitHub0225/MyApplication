@@ -34,52 +34,20 @@ public class Fragment1 extends Fragment {
     private int flag;
     private Socket socket;
 
-    @SuppressLint("ValidFragment")
-    public Fragment1(String content) {
-        this.content = content;
-    }
 
-    public Fragment1() {
-
-    }
 
     @Override
     public View onCreateView(final LayoutInflater inflater, final ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.layout1, container, false);
-        textView1 = view.findViewById(R.id.dizhi);
-        textView2 = view.findViewById(R.id.jianjie);
-        textView3 = view.findViewById(R.id.fengwei);
-        textView4 = view.findViewById(R.id.shijian);
-        textView5 = view.findViewById(R.id.koubei);
-
-        mSendHandlerThread = new HandlerThread("send");
-        mSendHandlerThread.start();
-        mSendHander = new Handler(mSendHandlerThread.getLooper(), new SendMessageCallback());
-
-        mSendHander.sendEmptyMessage(0);
-
-
-
-        while (flag == 0){
-            try {
-                System.out.println("waiting");
-                Thread.sleep(100);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
-        textView1.setText(parts[0]);
-        textView2.setText(parts[1]);
-        textView3.setText(parts[2]);
-        textView4.setText(parts[3]);
-        textView5.setText(parts[4]);
-        flag = 0;
+        //获取控件
+        initViews();
+        //开启线程
+        initThread();
+        //将获取到的值进行定位
+        setView();
         return view;
 
-
-
     }
-
 
     private class SendMessageCallback implements Handler.Callback {
         @Override
@@ -111,5 +79,43 @@ public class Fragment1 extends Fragment {
 
             return false;
         }
+    }
+    public void initViews(){
+        textView1 = view.findViewById(R.id.dizhi);
+        textView2 = view.findViewById(R.id.jianjie);
+        textView3 = view.findViewById(R.id.fengwei);
+        textView4 = view.findViewById(R.id.shijian);
+        textView5 = view.findViewById(R.id.koubei);
+    }
+    public void initThread(){
+        mSendHandlerThread = new HandlerThread("send");
+        mSendHandlerThread.start();
+        mSendHander = new Handler(mSendHandlerThread.getLooper(), new SendMessageCallback());
+
+        mSendHander.sendEmptyMessage(0);
+    }
+    public void setView(){
+        while (flag == 0){
+            try {
+                System.out.println("waiting");
+                Thread.sleep(50);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        textView1.setText(parts[0]);
+        textView2.setText(parts[1]);
+        textView3.setText(parts[2]);
+        textView4.setText(parts[3]);
+        textView5.setText(parts[4]);
+        flag = 0;
+    }
+    @SuppressLint("ValidFragment")
+    public Fragment1(String content) {
+        this.content = content;
+    }
+
+    public Fragment1() {
+
     }
 }

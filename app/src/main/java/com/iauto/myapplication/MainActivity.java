@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import com.iauto.myapplication.Fragment.Fragment1;
 import com.iauto.myapplication.Fragment.Fragment2;
@@ -39,14 +40,15 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        editText = findViewById(R.id.editText);
         fManager = getFragmentManager();
 
         radioGroup = (RadioGroup) findViewById(R.id.RadioGroup);
         radioGroup.setOnCheckedChangeListener(this);
         //获取第一个单选按钮，并设置其为选中状态
-        radioButton = (RadioButton) findViewById(R.id.jiaotong);
+        radioButton = (RadioButton) findViewById(R.id.jingdian);
         radioButton.setChecked(true);
-        editText = findViewById(R.id.editText);
+
 
         button = findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
@@ -76,12 +78,11 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
         });
     }
 
-
-
     @Override
     public void onCheckedChanged(RadioGroup group, int checkedId) {
         hideAllFragment(fTransaction);
         fTransaction = fManager.beginTransaction();
+        editText.getText().clear();
         switch (checkedId){
             case R.id.jingdian:
                 fg1 = null;
@@ -89,17 +90,17 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
                 FLAG = 1;
                 fTransaction.replace(R.id.content,fg1);
                 break;
-            case R.id.jiaotong:
+            case R.id.jiudian:
                 fg2 = null;
                 fg2 = new Fragment2();
                 FLAG = 2;
                 fTransaction.replace(R.id.content,fg2);
                 break;
-            case R.id.jiudian:
+            case R.id.jiaotong:
                 fg3 = null;
                 fg3 = new Fragment3();
                 FLAG = 3;
-                fTransaction.replace(R.id.relay,fg3);//在RelativeLayout中放置
+                fTransaction.replace(R.id.content,fg3);
                 break;
             case R.id.zhoubian:
                 fg4 = null;
