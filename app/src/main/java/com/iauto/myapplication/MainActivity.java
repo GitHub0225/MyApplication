@@ -11,7 +11,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 
 import com.iauto.myapplication.Fragment.Fragment1;
 import com.iauto.myapplication.Fragment.Fragment2;
@@ -19,14 +18,12 @@ import com.iauto.myapplication.Fragment.Fragment3;
 import com.iauto.myapplication.Fragment.Fragment4;
 
 
-/**
- * Created by Coder-pig on 2015/8/29 0028.
- */
+
 public class MainActivity extends Activity implements RadioGroup.OnCheckedChangeListener{
     private RadioGroup radioGroup;
     private RadioButton radioButton;
+    //设定当前Fragment，便于点击搜索时候传递flag
     private int FLAG;
-    //Fragment Object
     private FragmentTransaction fTransaction;
     private Fragment1 fg1;
     private Fragment2 fg2;
@@ -85,26 +82,30 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
         editText.getText().clear();
         switch (checkedId){
             case R.id.jingdian:
-                fg1 = null;
-                fg1 = new Fragment1();
+                if(fg1 == null){
+                    fg1 = new Fragment1();
+                }
                 FLAG = 1;
                 fTransaction.replace(R.id.content,fg1);
                 break;
             case R.id.jiudian:
-                fg2 = null;
-                fg2 = new Fragment2();
+                if(fg2 == null){
+                    fg2 = new Fragment2();
+                }
                 FLAG = 2;
                 fTransaction.replace(R.id.content,fg2);
                 break;
             case R.id.jiaotong:
-                fg3 = null;
-                fg3 = new Fragment3();
+                if(fg3 == null){
+                    fg3 = new Fragment3();
+                }
                 FLAG = 3;
                 fTransaction.replace(R.id.content,fg3);
                 break;
             case R.id.zhoubian:
-                fg4 = null;
-                fg4 = new Fragment4();
+                if(fg4 == null){
+                    fg4 = new Fragment4();
+                }
                 FLAG = 4;
                 fTransaction.replace(R.id.content,fg4);
                 break;
