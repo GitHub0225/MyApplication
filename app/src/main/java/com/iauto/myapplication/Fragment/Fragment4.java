@@ -15,7 +15,7 @@ public class Fragment4 extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.layout2,container,false);
+        View view = inflater.inflate(R.layout.layout4,container,false);
         ListView listView = (ListView) view.findViewById(R.id.list);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String >(getContext(),android.R.layout.simple_list_item_1,array);
         listView.setAdapter(arrayAdapter);

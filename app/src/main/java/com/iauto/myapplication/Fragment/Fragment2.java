@@ -8,17 +8,14 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.baidu.mapapi.map.MapView;
 import com.iauto.myapplication.R;
 //酒店模块
 public class Fragment2 extends Fragment {
-    private String[] array = {"1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1"};
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.layout2,container,false);
-        ListView listView = (ListView) view.findViewById(R.id.list);
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String >(getContext(),android.R.layout.simple_list_item_1,array);
-        listView.setAdapter(arrayAdapter);
+        MapView mapView = (MapView) view.findViewById(R.id.bmapView);
 
         return view;
     }
