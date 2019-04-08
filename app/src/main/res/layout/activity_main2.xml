@@ -5,13 +5,11 @@
     android:background="@color/bg_white">
 
     <com.baidu.mapapi.map.MapView
-        android:id="@+id/bmapView"
+        android:id="@+id/bmapView2"
         android:layout_width="match_parent"
         android:layout_height="1880dp"
         android:clickable="true"
         />
-
-
 
 </LinearLayout>
 

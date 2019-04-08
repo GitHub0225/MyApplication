@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import com.baidu.location.LocationClient;
 import com.iauto.myapplication.Fragment.Fragment1;
 import com.iauto.myapplication.Fragment.Fragment2;
 import com.iauto.myapplication.Fragment.Fragment3;
@@ -20,6 +21,7 @@ import com.iauto.myapplication.Fragment.Fragment4;
 
 
 public class MainActivity extends Activity implements RadioGroup.OnCheckedChangeListener{
+    private LocationClient mLocationClient;
     private RadioGroup radioGroup;
     private RadioButton radioButton;
     //设定当前Fragment，便于点击搜索时候传递flag
@@ -39,7 +41,7 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
         setContentView(R.layout.activity_main);
         editText = findViewById(R.id.editText);
         fManager = getFragmentManager();
-
+        mLocationClient = new LocationClient(this);
         radioGroup = (RadioGroup) findViewById(R.id.RadioGroup);
         radioGroup.setOnCheckedChangeListener(this);
         //获取第一个单选按钮，并设置其为选中状态
@@ -89,12 +91,11 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
                 fTransaction.replace(R.id.content,fg1);
                 break;
             case R.id.jiaotong:
-                if(fg2 == null){
-                    fg2 = new Fragment2();
-                }
+                fg2 = null;
+                fg2 = new Fragment2(mLocationClient);
                 FLAG = 2;
                 fTransaction.replace(R.id.content,fg2);
-                break;
+            break;
             case R.id.jiudian:
                 if(fg3 == null){
                     fg3 = new Fragment3();
