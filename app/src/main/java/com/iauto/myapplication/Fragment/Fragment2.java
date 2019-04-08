@@ -18,7 +18,6 @@ import com.baidu.mapapi.map.MapStatusUpdateFactory;
 import com.baidu.mapapi.map.MapView;
 import com.baidu.mapapi.map.MyLocationData;
 import com.baidu.mapapi.model.LatLng;
-import com.iauto.myapplication.R;
 //酒店模块
 public class Fragment2 extends Fragment {
     private BaiduMap mBaiduMap;
@@ -27,19 +26,18 @@ public class Fragment2 extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.layout2,container,false);
-        mMapView = (MapView) view.findViewById(R.id.bmapView);
+
         mBaiduMap = mMapView.getMap();
         mBaiduMap.setMyLocationEnabled(true);
         //实例化UiSettings类对象
-//通过设置enable为true或false 选择是否显示指南针
+//通过设置enable为true或false 选 择是否显示指南针
         //定位初始化
         mMapView.showZoomControls(true);
 //通过LocationClientOption设置LocationClient相关参数
         LocationClientOption option = new LocationClientOption();
         option.setOpenGps(true); // 打开gps
         option.setCoorType("bd09ll"); // 设置坐标类型
-        option.setScanSpan(1000);
+        option.setScanSpan(0);
         option.setIsNeedAddress(true);
         option.setLocationMode(LocationClientOption.LocationMode.Hight_Accuracy);
 //设置locationClientOption
@@ -50,7 +48,7 @@ public class Fragment2 extends Fragment {
         mLocationClient.registerLocationListener(myLocationListener);
 //开启地图定位图层
         mLocationClient.start();
-        return view;
+        return mMapView;
     }
     public class MyLocationListener extends BDAbstractLocationListener {
         @Override
@@ -63,11 +61,12 @@ public class Fragment2 extends Fragment {
                     .latitude(location.getLatitude())
                     .longitude(location.getLongitude())
                     .build();
-            mBaiduMap.setMyLocationData(locData);
-
             LatLng ll = new LatLng(location.getLatitude(), location.getLongitude());
             MapStatus.Builder builder = new MapStatus.Builder();
             builder.zoom(15).target(ll).targetScreen(new Point(540,960));
+            mBaiduMap.setMyLocationData(locData);
+
+
             mBaiduMap.animateMapStatus(MapStatusUpdateFactory.newMapStatus(builder.build()));
 //            //显示定位
             System.out.println(location.getLatitude()+"---"+location.getLongitude());
@@ -75,10 +74,12 @@ public class Fragment2 extends Fragment {
     }
 
     @SuppressLint("ValidFragment")
-    public Fragment2(LocationClient mLocationClient) {
+    public Fragment2(LocationClient mLocationClient,MapView mMapView) {
         this.mLocationClient = mLocationClient;
+        this.mMapView = mMapView;
     }
 
     public Fragment2() {
     }
+
 }

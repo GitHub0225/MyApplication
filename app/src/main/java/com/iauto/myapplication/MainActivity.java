@@ -13,6 +13,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.baidu.location.LocationClient;
+import com.baidu.mapapi.map.MapView;
 import com.iauto.myapplication.Fragment.Fragment1;
 import com.iauto.myapplication.Fragment.Fragment2;
 import com.iauto.myapplication.Fragment.Fragment3;
@@ -22,6 +23,7 @@ import com.iauto.myapplication.Fragment.Fragment4;
 
 public class MainActivity extends Activity implements RadioGroup.OnCheckedChangeListener{
     private LocationClient mLocationClient;
+    private MapView mMapView;
     private RadioGroup radioGroup;
     private RadioButton radioButton;
     //设定当前Fragment，便于点击搜索时候传递flag
@@ -39,6 +41,7 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mMapView = new MapView(this);
         editText = findViewById(R.id.editText);
         fManager = getFragmentManager();
         mLocationClient = new LocationClient(this);
@@ -91,8 +94,9 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
                 fTransaction.replace(R.id.content,fg1);
                 break;
             case R.id.jiaotong:
-                fg2 = null;
-                fg2 = new Fragment2(mLocationClient);
+                if(fg2 !=null){
+                fg2.onDestroy();}
+                fg2 = new Fragment2(mLocationClient,mMapView);
                 FLAG = 2;
                 fTransaction.replace(R.id.content,fg2);
             break;
