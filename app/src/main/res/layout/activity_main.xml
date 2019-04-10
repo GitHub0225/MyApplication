@@ -1,4 +1,4 @@
-<RelativeLayout
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/relay"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -18,28 +18,24 @@
         android:background="@color/bg_topbar"
         android:orientation="horizontal">
 
+
         <EditText
-            android:singleLine="true"
             android:id="@+id/editText"
-            android:layout_width="300sp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_centerInParent="true"
-            android:hint="请在此输入"
+            android:hint="查询请在此输入地址"
+            android:layout_weight="5"
+            android:singleLine="true"
             android:textColor="@color/text_topbar"
             android:textSize="18sp" />
 
         <Button
-            android:id="@+id/button"
-            android:layout_width="match_parent"
+            android:id="@+id/selectbutton"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="查询"/>
+            android:text="查询" />
 
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2px"
-            android:layout_alignParentBottom="true"
-            android:background="@color/div_white" />
 
     </LinearLayout>
 

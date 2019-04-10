@@ -50,6 +50,12 @@ public class Fragment2 extends Fragment {
         mLocationClient.start();
         return mMapView;
     }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+    }
+
     public class MyLocationListener extends BDAbstractLocationListener {
         @Override
         public void onReceiveLocation(BDLocation location) {

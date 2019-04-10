@@ -73,7 +73,7 @@
             android:enabled="true"
             android:process=":remote" />
 
-        <activity android:name=".Main2Activity">
+        <activity android:name=".addActivity">
         </activity>
     </application>
 

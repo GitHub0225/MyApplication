@@ -4,7 +4,9 @@ import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -34,7 +36,8 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
     private Fragment3 fg3;
     private Fragment4 fg4;
     private EditText editText;
-    private Button button;
+    private Button selectbutton;
+    private Button addbutton;
     private FragmentManager fManager;
 
     @Override
@@ -50,10 +53,19 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
         //获取第一个单选按钮，并设置其为选中状态
         radioButton = (RadioButton) findViewById(R.id.jingdian);
         radioButton.setChecked(true);
+        LayoutInflater layout=this.getLayoutInflater();
+        View view=layout.inflate(R.layout.layout1, null);
+        addbutton =(Button)view.findViewById(R.id.addbutton);
+        addbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                System.out.println(123);
+                startActivity(new Intent(MainActivity.this,addActivity.class));
+            }
+        });
 
-
-        button = findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
+        selectbutton = findViewById(R.id.selectbutton);
+        selectbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //点击按钮之后隐藏键盘
@@ -95,7 +107,7 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
                 break;
             case R.id.jiaotong:
                 if(fg2 !=null){
-                fg2.onDestroy();}
+                fg2.onDestroyView();}
                 fg2 = new Fragment2(mLocationClient,mMapView);
                 FLAG = 2;
                 fTransaction.replace(R.id.content,fg2);

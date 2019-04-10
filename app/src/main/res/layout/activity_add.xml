@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white">
+
+    <TableLayout
+        android:id="@+id/TableLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TableRow>
+            <TextView />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight="2"
+                android:gravity="center_vertical|left"
+                android:text="所选地址："
+                android:textSize="20dp"/>
+
+            <EditText
+                android:id="@+id/adddizhi"
+                android:layout_width="231dp"
+                android:layout_height="100dp"
+                android:layout_weight="8"
+                android:textSize="20dp" />
+        </TableRow>
+        <TableRow>
+            <TextView />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight="2"
+                android:gravity="center_vertical|left"
+                android:text="简介："
+                android:textSize="20dp"/>
+            <EditText
+                android:id="@+id/addjianjie"
+                android:layout_height="100dp"
+                android:layout_width="wrap_content"
+                android:layout_weight="8"
+                android:textSize="20dp"/>
+        </TableRow>
+        <TableRow>
+            <TextView />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight="2"
+                android:gravity="center_vertical|left"
+                android:text="特色风味："
+                android:textSize="20dp"/>
+            <EditText
+                android:id="@+id/addfengwei"
+                android:layout_height="100dp"
+                android:layout_width="wrap_content"
+                android:layout_weight="8"
+                android:textSize="20dp"/>
+        </TableRow>
+        <TableRow>
+            <TextView />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight="2"
+                android:gravity="center_vertical|left"
+                android:text="最佳旅游时间："
+                android:textSize="20dp"/>
+            <EditText
+                android:id="@+id/addshijian"
+                android:layout_height="100dp"
+                android:layout_width="wrap_content"
+                android:layout_weight="8"
+                android:textSize="20dp"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:gravity="center_vertical|left"
+                ></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight="2"
+                android:gravity="center_vertical|left"
+                android:text="口碑网评："
+                android:textSize="20dp"/>
+            <EditText
+                android:id="@+id/addkoubei"
+                android:layout_height="100dp"
+                android:layout_width="wrap_content"
+                android:layout_weight="8"
+                android:textSize="20dp"/>
+        </TableRow>
+
+    </TableLayout>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp" />
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_weight="4"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="提交" />
+        <TextView
+            android:layout_weight="4"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</LinearLayout>
