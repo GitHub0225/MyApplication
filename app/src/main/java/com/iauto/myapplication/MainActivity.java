@@ -4,22 +4,16 @@ import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-
 import com.baidu.location.LocationClient;
 import com.baidu.mapapi.map.MapView;
-import com.iauto.myapplication.Fragment.Fragment1;
-import com.iauto.myapplication.Fragment.Fragment2;
-import com.iauto.myapplication.Fragment.Fragment3;
-import com.iauto.myapplication.Fragment.Fragment4;
+import com.iauto.myapplication.Fragment.*;
 
 
 
@@ -79,6 +73,8 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
                 fTransaction.commit();
             }
         });
+
+
     }
 
     @Override
@@ -125,5 +121,8 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
         if(fg3 != null)fragmentTransaction.hide(fg3);
         if(fg4 != null)fragmentTransaction.hide(fg4);
     }
+
+
+
 
 }

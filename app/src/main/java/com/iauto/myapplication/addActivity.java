@@ -45,12 +45,19 @@ public class addActivity extends Activity {
         submitbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                string = adddizhi.getText().toString()+"_"
-                    + addjianjie.getText().toString()+"_"
-                    + addfengwei.getText().toString()+"_"
-                    + addshijian.getText().toString()+"_"
-                    + addkoubei.getText().toString();
-                mhandler.sendEmptyMessage(0);
+                String[] strings = new String[5] ;
+                strings[0] = adddizhi.getText().toString();
+                strings[1] = addjianjie.getText().toString();
+                strings[2] = addfengwei.getText().toString();
+                strings[3] = addshijian.getText().toString();
+                strings[4] = addkoubei.getText().toString();
+                if(strings[0].length()!=0&&strings[1].length()!=0&&strings[2].length()!=0&&strings[3].length()!=0&&strings[4].length()!=0){
+                    string = strings[0]+"_"+strings[1]+"_"+strings[2]+"_"+strings[3]+"_"+strings[4];
+                    mhandler.sendEmptyMessage(0);
+                }else {
+                    Toast.makeText(addActivity.this,"请将内容输入完整",Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
     }

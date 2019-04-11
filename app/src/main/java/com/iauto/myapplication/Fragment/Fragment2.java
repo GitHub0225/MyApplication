@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.graphics.Point;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +20,9 @@ import com.baidu.mapapi.map.MapView;
 import com.baidu.mapapi.map.MyLocationData;
 import com.baidu.mapapi.model.LatLng;
 
+import com.baidu.mapapi.search.poi.PoiSearch;
+
+
 public class Fragment2 extends Fragment {
     private BaiduMap mBaiduMap;
     private MapView mMapView;
@@ -29,25 +33,28 @@ public class Fragment2 extends Fragment {
 
         mBaiduMap = mMapView.getMap();
         mBaiduMap.setMyLocationEnabled(true);
+
+
         //实例化UiSettings类对象
-//通过设置enable为true或false 选 择是否显示指南针
+        //通过设置enable为true或false 选 择是否显示指南针
         //定位初始化
         mMapView.showZoomControls(true);
-//通过LocationClientOption设置LocationClient相关参数
+        //通过LocationClientOption设置LocationClient相关参数
         LocationClientOption option = new LocationClientOption();
         option.setOpenGps(true); // 打开gps
         option.setCoorType("bd09ll"); // 设置坐标类型
         option.setScanSpan(0);
         option.setIsNeedAddress(true);
         option.setLocationMode(LocationClientOption.LocationMode.Hight_Accuracy);
-//设置locationClientOption
+        //设置locationClientOption
         mLocationClient.setLocOption(option);
 
-//注册LocationListener监听器
+        //注册LocationListener监听器
         MyLocationListener myLocationListener = new MyLocationListener();
         mLocationClient.registerLocationListener(myLocationListener);
-//开启地图定位图层
+        //开启地图定位图层
         mLocationClient.start();
+
         return mMapView;
     }
 
@@ -74,6 +81,12 @@ public class Fragment2 extends Fragment {
             System.out.println(location.getLatitude()+"---"+location.getLongitude());
         }
     }
+
+
+
+
+
+
 
     @SuppressLint("ValidFragment")
     public Fragment2(LocationClient mLocationClient,MapView mMapView) {
