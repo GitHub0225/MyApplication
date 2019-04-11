@@ -2,6 +2,7 @@ package com.iauto.myapplication.Fragment;
 
 import android.annotation.SuppressLint;
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.HandlerThread;
@@ -11,7 +12,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.iauto.myapplication.MainActivity;
 import com.iauto.myapplication.R;
+import com.iauto.myapplication.addActivity;
+
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.InputStreamReader;
@@ -40,6 +45,14 @@ public class Fragment1 extends Fragment {
     @Override
     public View onCreateView(final LayoutInflater inflater, final ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.layout1, container, false);
+        Button button =(Button) view.findViewById(R.id.addbutton);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                System.out.println(123);
+                startActivity(new Intent(getContext(),addActivity.class));
+            }
+        });
         //获取控件
         initViews();
         //开启线程

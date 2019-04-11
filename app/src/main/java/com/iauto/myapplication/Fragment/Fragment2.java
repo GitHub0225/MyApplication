@@ -18,7 +18,7 @@ import com.baidu.mapapi.map.MapStatusUpdateFactory;
 import com.baidu.mapapi.map.MapView;
 import com.baidu.mapapi.map.MyLocationData;
 import com.baidu.mapapi.model.LatLng;
-//酒店模块
+
 public class Fragment2 extends Fragment {
     private BaiduMap mBaiduMap;
     private MapView mMapView;
@@ -51,10 +51,6 @@ public class Fragment2 extends Fragment {
         return mMapView;
     }
 
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-    }
 
     public class MyLocationListener extends BDAbstractLocationListener {
         @Override
@@ -69,7 +65,7 @@ public class Fragment2 extends Fragment {
                     .build();
             LatLng ll = new LatLng(location.getLatitude(), location.getLongitude());
             MapStatus.Builder builder = new MapStatus.Builder();
-            builder.zoom(15).target(ll).targetScreen(new Point(540,960));
+            builder.zoom(18).target(ll).targetScreen(new Point(540,960));
             mBaiduMap.setMyLocationData(locData);
 
 
@@ -86,6 +82,11 @@ public class Fragment2 extends Fragment {
     }
 
     public Fragment2() {
+    }
+    @Override
+    public void onResume() {
+        mMapView.onResume();
+        super.onResume();
     }
 
 }
