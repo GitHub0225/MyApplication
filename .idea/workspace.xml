@@ -26,7 +26,7 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/iauto/myapplication/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/iauto/myapplication/MainActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/iauto/myapplication/fragment/Fragment3.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/iauto/myapplication/fragment/Fragment3.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,11 +50,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/iauto/myapplication/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="68" column="38" selection-start-line="68" selection-start-column="30" selection-end-line="68" selection-end-column="38" />
+            <state relative-caret-position="591">
+              <caret line="83" column="27" lean-forward="true" selection-start-line="83" selection-start-column="27" selection-end-line="83" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1844#3005#0" expanded="true" />
@@ -64,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Fragment3.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Fragment3.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/iauto/myapplication/fragment/Fragment3.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
+            <state relative-caret-position="334">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2311#2319#0" expanded="true" />
@@ -80,11 +80,12 @@
       <file leaf-file-name="HotelInfo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/iauto/myapplication/other/HotelInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="28" column="62" selection-start-line="28" selection-start-column="62" selection-end-line="28" selection-end-column="62" />
+            <state relative-caret-position="551">
+              <caret line="29" column="19" lean-forward="true" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
               <folding>
                 <element signature="e#557#558#0" expanded="true" />
                 <element signature="e#590#591#0" expanded="true" />
+                <element signature="e#654#655#0" expanded="true" />
                 <element signature="e#698#699#0" expanded="true" />
               </folding>
             </state>
@@ -2994,10 +2995,10 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/iauto/myapplication/Fragment/Fragment1.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/iauto/myapplication/fragment/Fragment1.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/iauto/myapplication/MyApplication.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/iauto/myapplication/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/iauto/myapplication/other/HotelInfo.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/iauto/myapplication/other/Hotel.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/iauto/myapplication/fragment/Fragment3.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/iauto/myapplication/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -3238,14 +3239,14 @@
       <window_info id="Build Variants" order="3" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.20986359" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.10283316" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32948583" />
       <window_info anchor="bottom" id="Logcat" order="10" weight="0.77019936" />
       <window_info id="Captures" order="4" weight="0.25" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15754561" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15754561" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.25918153" />
       <window_info anchor="right" id="Gradle" order="6" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -3583,26 +3584,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/iauto/myapplication/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/iauto/myapplication/fragment/Fragment3.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="68" column="38" selection-start-line="68" selection-start-column="30" selection-end-line="68" selection-end-column="38" />
+        <state relative-caret-position="334">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1844#3005#0" expanded="true" />
-            <element signature="e#3004#3005#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/iauto/myapplication/other/HotelInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="28" column="62" selection-start-line="28" selection-start-column="62" selection-end-line="28" selection-end-column="62" />
-          <folding>
-            <element signature="e#557#558#0" expanded="true" />
-            <element signature="e#590#591#0" expanded="true" />
-            <element signature="e#698#699#0" expanded="true" />
+            <element signature="e#2311#2319#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3617,13 +3605,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/iauto/myapplication/fragment/Fragment3.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/iauto/myapplication/other/HotelInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
+        <state relative-caret-position="551">
+          <caret line="29" column="19" lean-forward="true" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+          <folding>
+            <element signature="e#557#558#0" expanded="true" />
+            <element signature="e#590#591#0" expanded="true" />
+            <element signature="e#654#655#0" expanded="true" />
+            <element signature="e#698#699#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/iauto/myapplication/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="591">
+          <caret line="83" column="27" lean-forward="true" selection-start-line="83" selection-start-column="27" selection-end-line="83" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2311#2319#0" expanded="true" />
+            <element signature="e#1844#3005#0" expanded="true" />
+            <element signature="e#3004#3005#0" expanded="true" />
           </folding>
         </state>
       </provider>

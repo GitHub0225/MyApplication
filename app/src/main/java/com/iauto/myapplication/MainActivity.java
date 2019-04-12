@@ -74,8 +74,21 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
                         fg2 = new Fragment2();
                         fTransaction = fManager.beginTransaction();
                         fTransaction.replace(R.id.content,fg2);
-                    default:
                         break;
+                    case 3:
+                        fg3 = null;
+                        fg3 = new Fragment3();
+                        fTransaction = fManager.beginTransaction();
+                        fTransaction.replace(R.id.content,fg3);
+                        break;
+                    case 4:
+                        fg4 = null;
+                        fg4 = new Fragment4();
+                        fTransaction = fManager.beginTransaction();
+                        fTransaction.replace(R.id.content,fg4);
+                        break;
+                    default:
+
                 }
                 fTransaction.commit();
             }
