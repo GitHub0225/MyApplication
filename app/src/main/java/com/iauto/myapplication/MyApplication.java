@@ -5,7 +5,19 @@ import android.app.Application;
 import com.baidu.mapapi.CoordType;
 import com.baidu.mapapi.SDKInitializer;
 
+import java.util.LinkedList;
+
 public class MyApplication extends Application {
+    private LinkedList<String> linkedList;
+
+    public LinkedList<String> getLinkedList() {
+        return linkedList;
+    }
+
+    public void setLinkedList(LinkedList<String> linkedList) {
+        this.linkedList = linkedList;
+    }
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -15,5 +27,8 @@ public class MyApplication extends Application {
         //包括BD09LL和GCJ02两种坐标，默认是BD09LL坐标。
         SDKInitializer.setCoordType(CoordType.BD09LL);
 
+
     }
+
+
 }

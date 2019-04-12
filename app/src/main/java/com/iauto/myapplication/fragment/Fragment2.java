@@ -1,10 +1,9 @@
-package com.iauto.myapplication.Fragment;
+package com.iauto.myapplication.fragment;
 
 import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.graphics.Point;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,8 +18,6 @@ import com.baidu.mapapi.map.MapStatusUpdateFactory;
 import com.baidu.mapapi.map.MapView;
 import com.baidu.mapapi.map.MyLocationData;
 import com.baidu.mapapi.model.LatLng;
-
-import com.baidu.mapapi.search.poi.PoiSearch;
 
 
 public class Fragment2 extends Fragment {

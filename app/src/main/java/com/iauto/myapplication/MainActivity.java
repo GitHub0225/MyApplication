@@ -13,8 +13,8 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import com.baidu.location.LocationClient;
 import com.baidu.mapapi.map.MapView;
-import com.iauto.myapplication.Fragment.*;
-
+import com.iauto.myapplication.fragment.*;
+import com.iauto.myapplication.other.Hotel;
 
 
 public class MainActivity extends Activity implements RadioGroup.OnCheckedChangeListener{
@@ -32,7 +32,7 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
     private EditText editText;
     private Button selectbutton;
     private FragmentManager fManager;
-
+    Hotel hotel = new Hotel();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +43,7 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
         mLocationClient = new LocationClient(this);
         radioGroup = (RadioGroup) findViewById(R.id.RadioGroup);
         radioGroup.setOnCheckedChangeListener(this);
+
         //获取第一个单选按钮，并设置其为选中状态
         radioButton = (RadioButton) findViewById(R.id.jingdian);
         radioButton.setChecked(true);
@@ -55,12 +56,16 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
                 InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                 imm.hideSoftInputFromWindow(getWindow().getDecorView().getWindowToken(), 0);
                 System.out.println(FLAG);
+
+
                 switch (FLAG){
                     case 1:
                         fg1 = null;
                         fg1 = new Fragment1(editText.getText().toString());
                         fTransaction = fManager.beginTransaction();
                         fTransaction.replace(R.id.content,fg1);
+                        hotel.getHotel(editText.getText().toString());
+
                         break;
                     case 2:
                         fg2 = null;
@@ -84,10 +89,11 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
         editText.getText().clear();
         switch (checkedId){
             case R.id.jingdian:
-                if(fg1 == null){
+
                     fg1 = new Fragment1();
-                }
+
                 FLAG = 1;
+
                 fTransaction.replace(R.id.content,fg1);
                 break;
             case R.id.jiaotong:

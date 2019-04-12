@@ -1,4 +1,4 @@
-package com.iauto.myapplication.Fragment;
+package com.iauto.myapplication.fragment;
 
 import android.app.Fragment;
 import android.os.Bundle;
