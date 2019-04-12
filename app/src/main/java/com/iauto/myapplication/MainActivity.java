@@ -32,11 +32,13 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
     private EditText editText;
     private Button selectbutton;
     private FragmentManager fManager;
+    private MyApplication application;
     Hotel hotel = new Hotel();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        application =(MyApplication)getApplication();
         mMapView = new MapView(this);
         editText = findViewById(R.id.editText);
         fManager = getFragmentManager();

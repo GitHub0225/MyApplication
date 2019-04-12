@@ -1,7 +1,5 @@
 package com.iauto.myapplication.other;
 
-import android.app.Application;
-
 import com.baidu.mapapi.search.core.PoiInfo;
 import com.baidu.mapapi.search.poi.OnGetPoiSearchResultListener;
 import com.baidu.mapapi.search.poi.PoiCitySearchOption;
@@ -10,7 +8,6 @@ import com.baidu.mapapi.search.poi.PoiDetailSearchResult;
 import com.baidu.mapapi.search.poi.PoiIndoorResult;
 import com.baidu.mapapi.search.poi.PoiResult;
 import com.baidu.mapapi.search.poi.PoiSearch;
-import com.iauto.myapplication.MyApplication;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -18,12 +15,9 @@ import java.util.List;
 
 
 public class Hotel {
-
-    public LinkedList<String> list1 = new LinkedList<>();
-
+HotelInfo hotelInfo = HotelInfo.getInstance();
     public void getHotel(String city){
-        final Application application = new MyApplication();
-
+        final LinkedList<String> linkedList = new LinkedList<>();
         PoiSearch mPoiSearch = PoiSearch.newInstance();
         OnGetPoiSearchResultListener listener = new OnGetPoiSearchResultListener() {
             @Override
@@ -31,11 +25,10 @@ public class Hotel {
                 List<PoiInfo> list = poiResult.getAllPoi();
                 if(list!=null){
                     for (PoiInfo p: list) {
-                        list1.add(p.getName());
-
+                        linkedList.add(p.getName());
                         System.out.println(p.getName());
                     }
-                    ((MyApplication) application).setLinkedList(list1);
+                    hotelInfo.setLinkedList(linkedList);
                 }
 
 
