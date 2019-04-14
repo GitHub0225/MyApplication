@@ -14,7 +14,7 @@ import android.widget.RadioGroup;
 import com.baidu.location.LocationClient;
 import com.baidu.mapapi.map.MapView;
 import com.iauto.myapplication.fragment.*;
-import com.iauto.myapplication.other.Hotel;
+import com.iauto.myapplication.other.Hotels;
 
 
 public class MainActivity extends Activity implements RadioGroup.OnCheckedChangeListener{
@@ -33,7 +33,7 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
     private Button selectbutton;
     private FragmentManager fManager;
     private MyApplication application;
-    Hotel hotel = new Hotel();
+    Hotels hotels = new Hotels();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,7 +66,7 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
                         fg1 = new Fragment1(editText.getText().toString());
                         fTransaction = fManager.beginTransaction();
                         fTransaction.replace(R.id.content,fg1);
-                        hotel.getHotel(editText.getText().toString());
+                        hotels.getHotel(editText.getText().toString());
 
                         break;
                     case 2:
