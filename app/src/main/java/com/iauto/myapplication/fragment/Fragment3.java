@@ -53,12 +53,15 @@ public class Fragment3 extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                if(linkedList != null){
                 //获取选中项名称
                 String item = linkedList.get(i).split("：")[1].split("\n")[0];
+                String addr = linkedList.get(i).split("：")[3].split("\n")[0];
                 Intent intent = new Intent(getContext(),DetailedHotelActivity.class);
                 intent.putExtra("item",item);
+                intent.putExtra("addr",addr);
                 startActivity(intent);
-            }
+            }}
         });
 
         return view;
