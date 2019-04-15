@@ -10,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 
 import com.baidu.mapapi.common.SysOSUtil;
@@ -61,7 +62,12 @@ public class Fragment3 extends Fragment {
                 intent.putExtra("item",item);
                 intent.putExtra("addr",addr);
                 startActivity(intent);
-            }}
+                }
+                else {
+                    Toast.makeText(getContext(), "不显示默认酒店的信息，请查询后再进行此操作",Toast.LENGTH_SHORT).show();
+
+                }
+            }
         });
 
         return view;
