@@ -1,6 +1,7 @@
 package com.iauto.myapplication.fragment;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +12,9 @@ import android.widget.EditText;
 import android.widget.ListView;
 
 
+import com.baidu.mapapi.common.SysOSUtil;
 import com.baidu.mapapi.search.poi.PoiSearch;
+import com.iauto.myapplication.DetailedHotelActivity;
 import com.iauto.myapplication.MyApplication;
 import com.iauto.myapplication.R;
 import com.iauto.myapplication.other.HotelInfo;
@@ -25,10 +28,11 @@ public class Fragment3 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.layout3, container, false);
-        ListView listView = (ListView) view.findViewById(R.id.list);
+        final ListView listView = (ListView) view.findViewById(R.id.list);
+        final LinkedList<String> linkedList = hotelInfo.getLinkedListhotel();
             if(hotelInfo.getLinkedListhotel()!=null) {
                 try {
-                    LinkedList<String> linkedList = hotelInfo.getLinkedListhotel();
+
                     array = new String[]{linkedList.get(0), linkedList.get(1), linkedList.get(2), linkedList.get(3), linkedList.get(4),
                             linkedList.get(5), linkedList.get(6), linkedList.get(7), linkedList.get(8), linkedList.get(9),
                             linkedList.get(10), linkedList.get(11), linkedList.get(12), linkedList.get(13), linkedList.get(14),
@@ -49,7 +53,11 @@ public class Fragment3 extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                System.out.println("单击");
+                //获取选中项名称
+                String item = linkedList.get(i).split("：")[1].split("\n")[0];
+                Intent intent = new Intent(getContext(),DetailedHotelActivity.class);
+                intent.putExtra("item",item);
+                startActivity(intent);
             }
         });
 

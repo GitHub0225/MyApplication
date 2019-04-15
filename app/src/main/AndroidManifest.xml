@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.iauto.myapplication">
-
     //网络链接
     <uses-permission android:name="android.permission.INTERNET" />
     //获取网络状态
@@ -72,11 +71,11 @@
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"
-            android:process=":remote" >
-        </service>
+            android:process=":remote"></service>
 
-        <activity android:name=".addActivity"></activity>
-        <activity android:name=".HotelActivity"></activity>
+        <activity android:name=".addActivity" />
+        <activity android:name=".HotelActivity" />
+        <activity android:name=".DetailedHotelActivity"></activity>
     </application>
 
 </manifest>
