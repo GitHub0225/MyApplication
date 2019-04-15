@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.iauto.myapplication">
+
     //网络链接
     <uses-permission android:name="android.permission.INTERNET" />
     //获取网络状态
@@ -56,8 +57,7 @@
         android:theme="@style/AppTheme">
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
-            android:value="ai5x7Bon7YhOocgdGtKw25qVI0Kidmt9" />
-            <!--android:value="lSNpDevoGOQki14NNxMMICUQfgWxMWjs" />-->
+            android:value="lSNpDevoGOQki14NNxMMICUQfgWxMWjs" />
 
         <activity
             android:name=".MainActivity"
@@ -68,14 +68,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!--baiduMap Service-->
+        <!-- baiduMap Service -->
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"
-            android:process=":remote" />
+            android:process=":remote" >
+        </service>
 
-        <activity android:name=".addActivity">
-        </activity>
+        <activity android:name=".addActivity"></activity>
+        <activity android:name=".HotelActivity"></activity>
     </application>
 
 </manifest>

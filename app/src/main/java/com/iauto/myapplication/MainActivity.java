@@ -5,6 +5,9 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.support.annotation.MainThread;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -14,6 +17,7 @@ import android.widget.RadioGroup;
 import com.baidu.location.LocationClient;
 import com.baidu.mapapi.map.MapView;
 import com.iauto.myapplication.fragment.*;
+import com.iauto.myapplication.other.HotelInfo;
 import com.iauto.myapplication.other.Hotels;
 
 
@@ -32,13 +36,14 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
     private EditText editText;
     private Button selectbutton;
     private FragmentManager fManager;
-    private MyApplication application;
-    Hotels hotels = new Hotels();
+    private Hotels hotels;
+
+    private Handler refreshList = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        application =(MyApplication)getApplication();
+        hotels = new Hotels();
         mMapView = new MapView(this);
         editText = findViewById(R.id.editText);
         fManager = getFragmentManager();
@@ -66,7 +71,11 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
                         fg1 = new Fragment1(editText.getText().toString());
                         fTransaction = fManager.beginTransaction();
                         fTransaction.replace(R.id.content,fg1);
-                        hotels.getHotel(editText.getText().toString());
+                        fTransaction.commit();
+                        //首次进入系统 即可预先查询fragment3 和 fragment的内容
+                        //0  3 代表之进行查询不显示
+                        hotels.getHotel(editText.getText().toString(), refreshList,0,"酒店");
+                        hotels.getHotel(editText.getText().toString(), refreshList,3,"景点");
 
                         break;
                     case 2:
@@ -74,27 +83,55 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
                         fg2 = new Fragment2();
                         fTransaction = fManager.beginTransaction();
                         fTransaction.replace(R.id.content,fg2);
+                        fTransaction.commit();
+
                         break;
                     case 3:
-                        fg3 = null;
-                        fg3 = new Fragment3();
-                        fTransaction = fManager.beginTransaction();
-                        fTransaction.replace(R.id.content,fg3);
+                        //在fragment3 界面进行查询，查询结果实时显示
+                        hotels.getHotel(editText.getText().toString(), refreshList,1,"酒店");
+
                         break;
                     case 4:
-                        fg4 = null;
-                        fg4 = new Fragment4();
-                        fTransaction = fManager.beginTransaction();
-                        fTransaction.replace(R.id.content,fg4);
+                        //在fragment4 界面进行查询，查询结果实时显示
+                        hotels.getHotel(editText.getText().toString(), refreshList,2,"景点");
+
                         break;
                     default:
 
                 }
-                fTransaction.commit();
             }
         });
 
-
+        refreshList = new Handler(this.getMainLooper(), new Handler.Callback() {
+            @Override
+            public boolean handleMessage(Message message) {
+                if(message.what == 0){
+                    //do nothing
+                    //表明是预查询
+                }
+                if(message.what == 3){
+                    //do nothing
+                    //表明是预查询
+                }
+                if(message.what == 1) {
+                    //更新fragment3
+                    fg3 = null;
+                    fg3 = new Fragment3();
+                    fTransaction = fManager.beginTransaction();
+                    fTransaction.replace(R.id.content, fg3);
+                    fTransaction.commit();
+                }
+                if(message.what == 2){
+                    //更新fragment4
+                    fg4 = null;
+                    fg4 = new Fragment4();
+                    fTransaction = fManager.beginTransaction();
+                    fTransaction.replace(R.id.content,fg4);
+                    fTransaction.commit();
+                }
+                return false;
+            }
+        });
     }
 
     @Override
@@ -104,17 +141,16 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
         editText.getText().clear();
         switch (checkedId){
             case R.id.jingdian:
-
+                if(fg1 == null) {
                     fg1 = new Fragment1();
-
-                FLAG = 1;
-
+                }FLAG = 1;
                 fTransaction.replace(R.id.content,fg1);
                 break;
             case R.id.jiaotong:
                 if(fg2 ==null){
                     fg2 = new Fragment2(mLocationClient,new MapView(this));
-                }FLAG = 2;
+                }
+                FLAG = 2;
                 fTransaction.replace(R.id.content,fg2);
             break;
             case R.id.jiudian:

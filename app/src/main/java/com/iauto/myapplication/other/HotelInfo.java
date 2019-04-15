@@ -4,7 +4,10 @@ import java.util.LinkedList;
 
 
 public class HotelInfo {
-    LinkedList<String> linkedList = null;
+    //存放酒店信息
+    LinkedList<String> linkedListhotel = null;
+    //存放景点信息
+    LinkedList<String> linkedListView = null;
 
     private HotelInfo() {
     }
@@ -22,11 +25,19 @@ public class HotelInfo {
         return instance;
     }
 
-    public LinkedList<String> getLinkedList() {
-        return linkedList;
+    public LinkedList<String> getLinkedListhotel() {
+        return linkedListhotel;
     }
 
-    public void setLinkedList(LinkedList<String> linkedList) {
-        this.linkedList = linkedList;
+    public void setLinkedListhotel(LinkedList<String> linkedListhotel) {
+        this.linkedListhotel = linkedListhotel;
+    }
+
+    public LinkedList<String> getLinkedListView() {
+        return linkedListView;
+    }
+
+    public void setLinkedListView(LinkedList<String> linkedListView) {
+        this.linkedListView = linkedListView;
     }
 }
