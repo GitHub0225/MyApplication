@@ -79,12 +79,6 @@ public class Fragment2 extends Fragment {
         }
     }
 
-
-
-
-
-
-
     @SuppressLint("ValidFragment")
     public Fragment2(LocationClient mLocationClient,MapView mMapView) {
         this.mLocationClient = mLocationClient;
