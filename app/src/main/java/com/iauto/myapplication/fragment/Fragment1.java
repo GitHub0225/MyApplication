@@ -69,28 +69,28 @@ public class Fragment1 extends Fragment {
         @Override
         public boolean handleMessage(Message message) {
 
-                try{
-                    socket = new Socket("101.132.176.85", 30000);
-                    ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(content.getBytes("utf-8"));
-                    OutputStream outputStream=socket.getOutputStream();
-                    byte[] buf=new byte[1024];
-                    int len;
-                    while((len=byteArrayInputStream.read(buf))!=-1){
-                        outputStream.write(buf, 0, len);
-                    }
-                    //刷新一下缓冲区的数据
-                    outputStream.flush();
-                    //告诉服务器，我的数据已经发送完了
-                    socket.shutdownOutput();
-
-                    bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-                    string = bufferedReader.readLine();
-                    parts = string.split("_");
-                    flag = 1;
-                    System.out.println(content+"-----------------------------");
-                }catch (Exception e){
-                    e.printStackTrace();
+            try{
+                socket = new Socket("101.132.176.85", 30000);
+                ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(content.getBytes("utf-8"));
+                OutputStream outputStream=socket.getOutputStream();
+                byte[] buf=new byte[1024];
+                int len;
+                while((len=byteArrayInputStream.read(buf))!=-1){
+                    outputStream.write(buf, 0, len);
                 }
+                //刷新一下缓冲区的数据
+                outputStream.flush();
+                //告诉服务器，我的数据已经发送完了
+                socket.shutdownOutput();
+
+                bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+                string = bufferedReader.readLine();
+                parts = string.split("_");
+                flag = 1;
+                System.out.println(content+"-----------------------------");
+            }catch (Exception e){
+                e.printStackTrace();
+            }
 
 
             return false;
@@ -134,5 +134,6 @@ public class Fragment1 extends Fragment {
     public Fragment1() {
 
     }
+
 
 }
