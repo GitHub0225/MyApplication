@@ -17,8 +17,8 @@ import java.util.List;
 
 
 
-public class Hotels {
-HotelInfo hotelInfo = HotelInfo.getInstance();
+public class SurroundingInfo {
+SingleClass singleClass = SingleClass.getInstance();
     public void getHotel(String city, final Handler handler, final int i, final String keyword){
         final LinkedList<String> linkedList = new LinkedList<>();
         PoiSearch mPoiSearch = PoiSearch.newInstance();
@@ -34,7 +34,7 @@ HotelInfo hotelInfo = HotelInfo.getInstance();
                         linkedList.add("\n酒店："+p.getName()+"\n \n联系方式："+p.getPhoneNum()+"\n \n地址："+p.getAddress()+"\n"+"\n如需了解酒店详情或预订房间请点击此处\n");
                         System.out.println(p.getName());
                     }
-                    hotelInfo.setLinkedListhotel(linkedList);
+                    singleClass.setLinkedListhotel(linkedList);
                     }
                     if(keyword == "景点"){
 
@@ -42,7 +42,7 @@ HotelInfo hotelInfo = HotelInfo.getInstance();
                         linkedList.add("\n景点："+p.getName()+"\n \n联系方式："+p.getPhoneNum()+"\n \n地址："+p.getAddress()+"\n"+"\n如需了解景点详情请点击此处\n");
                         System.out.println(p.getName());
                         }
-                    hotelInfo.setLinkedListView(linkedList);
+                    singleClass.setLinkedListView(linkedList);
                     }
                 }
                 Message message = new Message();

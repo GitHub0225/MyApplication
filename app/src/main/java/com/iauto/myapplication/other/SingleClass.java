@@ -3,22 +3,22 @@ package com.iauto.myapplication.other;
 import java.util.LinkedList;
 
 
-public class HotelInfo {
+public class SingleClass {
     //存放酒店信息
     LinkedList<String> linkedListhotel = null;
     //存放景点信息
     LinkedList<String> linkedListView = null;
 
-    private HotelInfo() {
+    private SingleClass() {
     }
 
-    private static volatile HotelInfo instance = null;
+    private static volatile SingleClass instance = null;
 
-    public static HotelInfo getInstance() {
+    public static SingleClass getInstance() {
         if (instance == null) {
-            synchronized (HotelInfo.class) {
+            synchronized (SingleClass.class) {
                 if (instance == null) {
-                    instance = new HotelInfo();
+                    instance = new SingleClass();
                 }
             }
         }

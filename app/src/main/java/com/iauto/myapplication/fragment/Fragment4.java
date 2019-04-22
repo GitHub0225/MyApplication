@@ -7,28 +7,25 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.ListView;
 
 
-import com.baidu.mapapi.search.poi.PoiSearch;
-import com.iauto.myapplication.MyApplication;
 import com.iauto.myapplication.R;
-import com.iauto.myapplication.other.HotelInfo;
+import com.iauto.myapplication.other.SingleClass;
 
 import java.util.LinkedList;
 
 //详细景点
 public class Fragment4 extends Fragment {
     String[] array = null;
-    HotelInfo hotelInfo = HotelInfo.getInstance();
+    SingleClass singleClass = SingleClass.getInstance();
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.layout4, container, false);
         ListView listView = (ListView) view.findViewById(R.id.list);
-        if(hotelInfo.getLinkedListView()!=null) {
+        if(singleClass.getLinkedListView()!=null) {
             try {
-                LinkedList<String> linkedList = hotelInfo.getLinkedListView();
+                LinkedList<String> linkedList = singleClass.getLinkedListView();
                 array = new String[]{linkedList.get(0), linkedList.get(1), linkedList.get(2), linkedList.get(3), linkedList.get(4),
                         linkedList.get(5), linkedList.get(6), linkedList.get(7), linkedList.get(8), linkedList.get(9),
                         linkedList.get(10), linkedList.get(11), linkedList.get(12), linkedList.get(13), linkedList.get(14),

@@ -7,7 +7,6 @@ import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.support.annotation.MainThread;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -17,8 +16,7 @@ import android.widget.RadioGroup;
 import com.baidu.location.LocationClient;
 import com.baidu.mapapi.map.MapView;
 import com.iauto.myapplication.fragment.*;
-import com.iauto.myapplication.other.HotelInfo;
-import com.iauto.myapplication.other.Hotels;
+import com.iauto.myapplication.other.SurroundingInfo;
 
 
 public class MainActivity extends Activity implements RadioGroup.OnCheckedChangeListener{
@@ -36,14 +34,14 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
     private EditText editText;
     private Button selectbutton;
     private FragmentManager fManager;
-    private Hotels hotels;
+    private SurroundingInfo surroundingInfo;
 
     private Handler refreshList = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        hotels = new Hotels();
+        surroundingInfo = new SurroundingInfo();
         mMapView = new MapView(this);
         editText = findViewById(R.id.editText);
         fManager = getFragmentManager();
@@ -74,8 +72,8 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
                         fTransaction.commit();
                         //首次进入系统 即可预先查询fragment3 和 fragment的内容
                         //0  3 代表之进行查询不显示
-                        hotels.getHotel(editText.getText().toString(), refreshList,0,"酒店");
-                        hotels.getHotel(editText.getText().toString(), refreshList,3,"景点");
+                        surroundingInfo.getHotel(editText.getText().toString(), refreshList,0,"酒店");
+                        surroundingInfo.getHotel(editText.getText().toString(), refreshList,3,"景点");
 
                         break;
                     case 2:
@@ -88,12 +86,12 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
                         break;
                     case 3:
                         //在fragment3 界面进行查询，查询结果实时显示
-                        hotels.getHotel(editText.getText().toString(), refreshList,1,"酒店");
+                        surroundingInfo.getHotel(editText.getText().toString(), refreshList,1,"酒店");
 
                         break;
                     case 4:
                         //在fragment4 界面进行查询，查询结果实时显示
-                        hotels.getHotel(editText.getText().toString(), refreshList,2,"景点");
+                        surroundingInfo.getHotel(editText.getText().toString(), refreshList,2,"景点");
 
                         break;
                     default:
