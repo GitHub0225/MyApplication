@@ -27,7 +27,7 @@ public class Fragment3 extends Fragment {
         View view = inflater.inflate(R.layout.layout3, container, false);
         final ListView listView = (ListView) view.findViewById(R.id.list);
         final LinkedList<String> linkedList = singleClass.getLinkedListhotel();
-            if(singleClass.getLinkedListhotel()!=null) {
+            if(singleClass.getLinkedListhotel() != null) {
                 try {
 
                     array = new String[]{linkedList.get(0), linkedList.get(1), linkedList.get(2), linkedList.get(3), linkedList.get(4),

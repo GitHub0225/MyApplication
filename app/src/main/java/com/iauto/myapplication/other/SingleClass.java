@@ -5,10 +5,10 @@ import java.util.LinkedList;
 
 public class SingleClass {
     //存放酒店信息
-    LinkedList<String> linkedListhotel = new LinkedList<>();
+    LinkedList<String> linkedListhotel = null;
     //存放景点信息
-    LinkedList<String> linkedListView = new LinkedList<>();
-    //获取一个链表
+    LinkedList<String> linkedListView = null;
+
     LinkedList<String> linkedList = new LinkedList<>();
 
     private SingleClass() {
@@ -46,5 +46,4 @@ public class SingleClass {
     public LinkedList<String> getLinkedList() {
         return linkedList;
     }
-
 }

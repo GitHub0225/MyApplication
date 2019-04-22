@@ -10,10 +10,6 @@ import java.util.LinkedList;
 public class MyApplication extends Application {
     private LinkedList<String> linkedList = new LinkedList<>();
 
-    public LinkedList<String> getLinkedList() {
-        return linkedList;
-    }
-
     public void setLinkedList(LinkedList<String> linkedList) {
         this.linkedList = linkedList;
     }

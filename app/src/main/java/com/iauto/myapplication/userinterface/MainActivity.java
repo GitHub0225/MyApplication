@@ -1,12 +1,17 @@
 package com.iauto.myapplication.userinterface;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.provider.Settings;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -42,6 +47,7 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //initGPS();
         surroundingInfo = new SurroundingInfo();
         mMapView = new MapView(this);
         editText = findViewById(R.id.editText);
@@ -178,7 +184,34 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
         if(fg4 != null)fragmentTransaction.hide(fg4);
     }
 
-
-
+//    private void initGPS(){
+//        LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+//        //判断GPS是否开启，没有开启，则开启
+//        if(!locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)){
+//            openGPSDialog();
+//        }
+//    }
+//    private void openGPSDialog() {
+//        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+//        builder.setTitle("请打开GPS连接")
+//                .setIcon(R.mipmap.ic_launcher_round)
+//                .setMessage("为了提高定位的准确度，更好的为您服务，请打开GPS")
+//                .setPositiveButton("设置", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialogInterface, int i) {
+//                        //跳转到手机打开GPS页面
+//                        Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+//                        //设置完成后返回原来的界面
+//                        startActivityForResult(intent,0);
+//                    }
+//                })
+//                .setNeutralButton("取消", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialogInterface, int i) {
+//                        dialogInterface.dismiss();
+//                    }
+//                }).show();
+//    }
+//
 
 }
