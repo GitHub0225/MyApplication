@@ -19,15 +19,14 @@ import java.util.List;
 
 public class SurroundingInfo {
 SingleClass singleClass = SingleClass.getInstance();
-    public void getHotel(String city, final Handler handler, final int i, final String keyword){
-        final LinkedList<String> linkedList = new LinkedList<>();
+    public void getInfo(String city, final Handler handler, final int i, final String keyword){
+        final LinkedList<String> linkedList = singleClass.getLinkedList();
         PoiSearch mPoiSearch = PoiSearch.newInstance();
         OnGetPoiSearchResultListener listener = new OnGetPoiSearchResultListener() {
             @Override
             public void onGetPoiResult(PoiResult poiResult) {
-                System.out.println(Thread.currentThread().getId()+"   9");
                 List<PoiInfo> list = poiResult.getAllPoi();
-                if(list!=null){
+                if(list != null){
                     if(keyword == "酒店"){
 
                     for (PoiInfo p: list) {
@@ -86,9 +85,6 @@ SingleClass singleClass = SingleClass.getInstance();
                 .keyword(keyword)
                 .pageCapacity(20)//一夜显示多少
                 .pageNum(0));//显示第几页
-        System.out.println(Thread.currentThread().getId()+"   9");
-
-
 
         mPoiSearch.destroy();
 

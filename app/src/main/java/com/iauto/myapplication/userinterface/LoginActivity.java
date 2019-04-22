@@ -1,4 +1,4 @@
-package com.iauto.myapplication;
+package com.iauto.myapplication.userinterface;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -30,6 +30,8 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+
+import com.iauto.myapplication.R;
 
 import java.util.ArrayList;
 import java.util.List;

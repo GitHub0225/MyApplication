@@ -52,7 +52,7 @@
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
-        android:name=".MyApplication"
+        android:name=".userinterface.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -64,7 +64,7 @@
             android:value="lSNpDevoGOQki14NNxMMICUQfgWxMWjs" />
 
         <activity
-            android:name=".MainActivity"
+            android:name=".userinterface.MainActivity"
             android:label="@string/title_activity_login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -77,12 +77,13 @@
             android:name="com.baidu.location.f"
             android:enabled="true"
             android:process=":remote" />
-        <activity
-            android:name=".LoginActivity"
-            android:label="@string/app_name"/>
-        <activity android:name=".addActivity" />
-        <activity android:name=".DetailedHotelActivity" />
 
+        <activity
+            android:name=".userinterface.LoginActivity"
+            android:label="@string/app_name" />
+        <activity android:name=".userinterface.addActivity" />
+        <activity android:name=".userinterface.DetailedHotelActivity" />
+        <activity android:name=".userinterface.DetailedAttractionsActivity"></activity>
     </application>
 
 </manifest>

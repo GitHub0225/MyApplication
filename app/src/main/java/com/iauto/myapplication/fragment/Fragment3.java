@@ -12,7 +12,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 
-import com.iauto.myapplication.DetailedHotelActivity;
+import com.iauto.myapplication.userinterface.DetailedHotelActivity;
 import com.iauto.myapplication.R;
 import com.iauto.myapplication.other.SingleClass;
 

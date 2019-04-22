@@ -1,4 +1,4 @@
-package com.iauto.myapplication;
+package com.iauto.myapplication.userinterface;
 
 import android.app.Activity;
 import android.app.FragmentManager;
@@ -15,6 +15,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import com.baidu.location.LocationClient;
 import com.baidu.mapapi.map.MapView;
+import com.iauto.myapplication.R;
 import com.iauto.myapplication.fragment.*;
 import com.iauto.myapplication.other.SurroundingInfo;
 
@@ -72,8 +73,8 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
                         fTransaction.commit();
                         //首次进入系统 即可预先查询fragment3 和 fragment的内容
                         //0  3 代表之进行查询不显示
-                        surroundingInfo.getHotel(editText.getText().toString(), refreshList,0,"酒店");
-                        surroundingInfo.getHotel(editText.getText().toString(), refreshList,3,"景点");
+                        surroundingInfo.getInfo(editText.getText().toString(), refreshList,0,"酒店");
+                        surroundingInfo.getInfo(editText.getText().toString(), refreshList,3,"景点");
 
                         break;
                     case 2:
@@ -86,12 +87,12 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
                         break;
                     case 3:
                         //在fragment3 界面进行查询，查询结果实时显示
-                        surroundingInfo.getHotel(editText.getText().toString(), refreshList,1,"酒店");
+                        surroundingInfo.getInfo(editText.getText().toString(), refreshList,1,"酒店");
 
                         break;
                     case 4:
                         //在fragment4 界面进行查询，查询结果实时显示
-                        surroundingInfo.getHotel(editText.getText().toString(), refreshList,2,"景点");
+                        surroundingInfo.getInfo(editText.getText().toString(), refreshList,2,"景点");
 
                         break;
                     default:

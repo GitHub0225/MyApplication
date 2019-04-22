@@ -1,8 +1,10 @@
-package com.iauto.myapplication;
+package com.iauto.myapplication.userinterface;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
+
+import com.iauto.myapplication.R;
 
 public class DetailedHotelActivity extends AppCompatActivity {
 

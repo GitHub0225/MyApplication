@@ -14,7 +14,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.iauto.myapplication.R;
-import com.iauto.myapplication.addActivity;
+import com.iauto.myapplication.userinterface.addActivity;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;

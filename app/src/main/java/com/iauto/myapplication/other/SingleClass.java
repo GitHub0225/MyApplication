@@ -5,9 +5,11 @@ import java.util.LinkedList;
 
 public class SingleClass {
     //存放酒店信息
-    LinkedList<String> linkedListhotel = null;
+    LinkedList<String> linkedListhotel = new LinkedList<>();
     //存放景点信息
-    LinkedList<String> linkedListView = null;
+    LinkedList<String> linkedListView = new LinkedList<>();
+    //获取一个链表
+    LinkedList<String> linkedList = new LinkedList<>();
 
     private SingleClass() {
     }
@@ -40,4 +42,9 @@ public class SingleClass {
     public void setLinkedListView(LinkedList<String> linkedListView) {
         this.linkedListView = linkedListView;
     }
+
+    public LinkedList<String> getLinkedList() {
+        return linkedList;
+    }
+
 }
