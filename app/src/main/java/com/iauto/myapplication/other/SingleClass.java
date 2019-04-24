@@ -9,8 +9,6 @@ public class SingleClass {
     //存放景点信息
     LinkedList<String> linkedListView = null;
 
-    LinkedList<String> linkedList = new LinkedList<>();
-
     private SingleClass() {
     }
 
@@ -43,7 +41,4 @@ public class SingleClass {
         this.linkedListView = linkedListView;
     }
 
-    public LinkedList<String> getLinkedList() {
-        return linkedList;
-    }
 }

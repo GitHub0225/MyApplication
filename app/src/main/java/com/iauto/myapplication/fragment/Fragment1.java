@@ -1,6 +1,5 @@
 package com.iauto.myapplication.fragment;
 
-import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,9 +10,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.iauto.myapplication.R;
+import com.iauto.myapplication.other.SurroundingInfo;
 import com.iauto.myapplication.userinterface.addActivity;
 
 import java.io.BufferedReader;
@@ -26,6 +27,7 @@ public class Fragment1 extends Fragment {
     //创建Fragment默认显示北京的信息。
     private String content = "北京";
     private HandlerThread mSendHandlerThread;
+    private SurroundingInfo surroundingInfo;
     private Handler mSendHander;
     private View view;
     private String string;
@@ -39,8 +41,6 @@ public class Fragment1 extends Fragment {
     private int flag;
     private Socket socket;
 
-
-
     @Override
     public View onCreateView(final LayoutInflater inflater, final ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.layout1, container, false);
@@ -52,10 +52,30 @@ public class Fragment1 extends Fragment {
                 startActivity(new Intent(getContext(),addActivity.class));
             }
         });
+        surroundingInfo = new SurroundingInfo();
         //获取控件
         initViews();
+        final EditText editText1 = view.findViewById(R.id.editText1);
+
+        Button button1 = (Button) view.findViewById(R.id.selectbutton1);
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               content = editText1.getText().toString();
+               if(content.length() == 0){
+                   content = "北京";
+               }
+                //开启线程
+                initThread(content);
+                //将获取到的值进行定位
+                setView();
+                surroundingInfo.getInfo(editText1.getText().toString(),"酒店",0);
+                surroundingInfo.getInfo(editText1.getText().toString(),"景点",0);
+
+            }
+        });
         //开启线程
-        initThread();
+        initThread(content);
         //将获取到的值进行定位
         setView();
 
@@ -63,15 +83,13 @@ public class Fragment1 extends Fragment {
 
     }
 
-
-
     private class SendMessageCallback implements Handler.Callback {
         @Override
         public boolean handleMessage(Message message) {
-
+                String con = (String) message.obj;
             try{
                 socket = new Socket("101.132.176.85", 30000);
-                ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(content.getBytes("utf-8"));
+                ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(con.getBytes("utf-8"));
                 OutputStream outputStream=socket.getOutputStream();
                 byte[] buf=new byte[1024];
                 int len;
@@ -87,7 +105,7 @@ public class Fragment1 extends Fragment {
                 string = bufferedReader.readLine();
                 parts = string.split("_");
                 flag = 1;
-                System.out.println(content+"-----------------------------");
+                System.out.println(con+"-----------------------------");
             }catch (Exception e){
                 e.printStackTrace();
             }
@@ -103,12 +121,13 @@ public class Fragment1 extends Fragment {
         textView4 = view.findViewById(R.id.shijian);
         textView5 = view.findViewById(R.id.koubei);
     }
-    public void initThread(){
+    public void initThread( String string){
         mSendHandlerThread = new HandlerThread("send");
         mSendHandlerThread.start();
         mSendHander = new Handler(mSendHandlerThread.getLooper(), new SendMessageCallback());
-
-        mSendHander.sendEmptyMessage(0);
+        Message message = new Message();
+        message.obj = string;
+        mSendHander.sendMessage(message);
     }
     public void setView(){
         while (flag == 0){
@@ -125,14 +144,6 @@ public class Fragment1 extends Fragment {
         textView4.setText(parts[3]);
         textView5.setText(parts[4]);
         flag = 0;
-    }
-    @SuppressLint("ValidFragment")
-    public Fragment1(String content) {
-        this.content = content;
-    }
-
-    public Fragment1() {
-
     }
 
 

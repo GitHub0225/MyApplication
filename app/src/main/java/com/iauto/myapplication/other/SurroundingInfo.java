@@ -11,6 +11,7 @@ import com.baidu.mapapi.search.poi.PoiDetailSearchResult;
 import com.baidu.mapapi.search.poi.PoiIndoorResult;
 import com.baidu.mapapi.search.poi.PoiResult;
 import com.baidu.mapapi.search.poi.PoiSearch;
+import com.iauto.myapplication.userinterface.MainActivity;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -19,8 +20,10 @@ import java.util.List;
 
 public class SurroundingInfo {
 SingleClass singleClass = SingleClass.getInstance();
-    public void getInfo(String city, final Handler handler, final int i, final String keyword){
-        final LinkedList<String> linkedList = singleClass.getLinkedList();
+    public void getInfo(String city, final String keyword, final int i){
+        final LinkedList<String> linkedListHotel = new LinkedList<>();
+        final LinkedList<String> linkedListView = new LinkedList<>();
+
         PoiSearch mPoiSearch = PoiSearch.newInstance();
         OnGetPoiSearchResultListener listener = new OnGetPoiSearchResultListener() {
             @Override
@@ -30,37 +33,32 @@ SingleClass singleClass = SingleClass.getInstance();
                     if(keyword == "酒店"){
 
                     for (PoiInfo p: list) {
-                        linkedList.add("\n酒店："+p.getName()+"\n \n联系方式："+p.getPhoneNum()+"\n \n地址："+p.getAddress()+"\n"+"\n如需了解酒店详情或预订房间请点击此处\n");
+                        linkedListHotel.add("\n酒店："+p.getName()+"\n \n联系方式："+p.getPhoneNum()+"\n \n地址："+p.getAddress()+"\n"+"\n如需了解酒店详情或预订房间请点击此处\n");
                         System.out.println(p.getName());
                     }
-                    singleClass.setLinkedListhotel(linkedList);
+                        singleClass.setLinkedListhotel(null);
+                        singleClass.setLinkedListhotel(linkedListHotel);
                     }
                     if(keyword == "景点"){
 
                     for (PoiInfo p: list) {
-                        linkedList.add("\n景点："+p.getName()+"\n \n联系方式："+p.getPhoneNum()+"\n \n地址："+p.getAddress()+"\n"+"\n如需了解景点详情请点击此处\n");
+                        linkedListView.add("\n景点："+p.getName()+"\n \n联系方式："+p.getPhoneNum()+"\n \n地址："+p.getAddress()+"\n"+"\n如需了解景点详情请点击此处\n");
                         System.out.println(p.getName());
                         }
-                    singleClass.setLinkedListView(linkedList);
+                        singleClass.setLinkedListView(null);
+                        singleClass.setLinkedListView(linkedListView);
+                    }
+                    if(i == 0){
+                        MainActivity.handler.sendEmptyMessage(0);
+                    }
+                    if(i == 3){
+                        MainActivity.handler.sendEmptyMessage(3);
+                    }
+                    if(i == 4){
+                        MainActivity.handler.sendEmptyMessage(4);
                     }
                 }
-                Message message = new Message();
-                if(i == 0){
-                    message.what = 0;
-                    handler.sendMessage(message);
-                }
-                if(i == 1){
-                    message.what = 1;
-                    handler.sendMessage(message);
-                }
-                if(i == 2){
-                    message.what = 2;
-                    handler.sendMessage(message);
-                }
-                if(i == 3){
-                    message.what = 3;
-                    handler.sendMessage(message);
-                }
+
                 }
 
             @Override

@@ -64,7 +64,7 @@ public class Fragment2 extends Fragment {
         //开启地图定位图层
         mLocationClient.start();
         //路线规划模块
-        mSearch.setOnGetRoutePlanResultListener(listener);
+        //mSearch.setOnGetRoutePlanResultListener(listener);
         PlanNode stNode = PlanNode.withCityNameAndPlaceName("上海", "新华联大厦");
         PlanNode enNode = PlanNode.withCityNameAndPlaceName("上海", "东方明珠");
         mSearch.drivingSearch((new DrivingRoutePlanOption())

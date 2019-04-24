@@ -7,11 +7,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
-
 
 import com.iauto.myapplication.R;
 import com.iauto.myapplication.other.SingleClass;
+import com.iauto.myapplication.other.SurroundingInfo;
 
 import java.util.LinkedList;
 
@@ -22,6 +24,15 @@ public class Fragment4 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.layout4, container, false);
+        final EditText editText4 = view.findViewById(R.id.editText4);
+        Button button4 = view.findViewById(R.id.selectbutton4);
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SurroundingInfo surroundingInfo = new SurroundingInfo();
+                surroundingInfo.getInfo(editText4.getText().toString(),"景点",4);
+            }
+        });
         ListView listView = (ListView) view.findViewById(R.id.list);
         if(singleClass.getLinkedListView()!=null) {
             try {

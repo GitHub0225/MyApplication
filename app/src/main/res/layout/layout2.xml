@@ -10,7 +10,5 @@
         android:layout_height="1880dp"
         android:clickable="true" />
 
-
-
 </RelativeLayout>
 
