@@ -1,14 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linner"
     android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_white">
-
-    <TextView
-        android:id="@+id/bmapView"
+    <EditText
+        android:id="@+id/qidian"
+        android:hint="输入起点"
+        android:layout_width="150dp"
+        android:layout_height="40dp" />
+    <View
+        android:id="@+id/view"
+        android:layout_width="10dp"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/qidian"/>
+    <EditText
+        android:id="@+id/zhongdian"
+        android:hint="输入终点"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/view"/>
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@id/zhongdian"
+        android:text="查找"/>
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/mapView"
         android:layout_width="match_parent"
-        android:layout_height="1880dp"
-        android:clickable="true" />
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:layout_below="@id/qidian"/>
+    <!--<TextView-->
+    <!--android:id="@+id/bmapView"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="400dp"-->
+    <!--android:layout_below="@+id/qidian"-->
+    <!--android:clickable="true" />-->
 
 </RelativeLayout>
 

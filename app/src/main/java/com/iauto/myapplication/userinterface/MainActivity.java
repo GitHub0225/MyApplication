@@ -96,8 +96,8 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
                 fTransaction.replace(R.id.relay,fg1);
                 break;
             case R.id.jiaotong:
-                if(fg2 ==null){
-                    fg2 = new Fragment2(mLocationClient,new MapView(this));
+                if(fg2 == null){
+                    fg2 = new Fragment2(mLocationClient);
                 }
                 fTransaction.replace(R.id.relay,fg2);
             break;

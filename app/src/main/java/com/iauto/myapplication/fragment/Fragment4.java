@@ -23,6 +23,7 @@ public class Fragment4 extends Fragment {
     SingleClass singleClass = SingleClass.getInstance();
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        System.out.println("===================================================================");
         View view = inflater.inflate(R.layout.layout4, container, false);
         final EditText editText4 = view.findViewById(R.id.editText4);
         Button button4 = view.findViewById(R.id.selectbutton4);
