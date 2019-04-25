@@ -1,8 +1,9 @@
 package com.iauto.myapplication.other;
-
+/**
+ * created by {Paul}
+ * on 19-4-25
+ */
 import java.util.LinkedList;
-
-
 public class SingleClass {
     //存放酒店信息
     LinkedList<String> linkedListhotel = null;

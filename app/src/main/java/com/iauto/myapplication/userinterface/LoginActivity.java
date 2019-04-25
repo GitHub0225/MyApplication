@@ -1,5 +1,8 @@
 package com.iauto.myapplication.userinterface;
-
+/**
+ * created by {Paul}
+ * on 19-4-25
+ */
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;

@@ -53,15 +53,16 @@
 
     <application
         android:name=".userinterface.MyApplication"
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
-            android:value="lSNpDevoGOQki14NNxMMICUQfgWxMWjs" />
+            android:value="lSNpDevoGOQki14NNxMMICUQfgWxMWjs" >
+        </meta-data>
 
         <activity
             android:name=".userinterface.MainActivity"
@@ -83,7 +84,7 @@
             android:label="@string/app_name" />
         <activity android:name=".userinterface.addActivity" />
         <activity android:name=".userinterface.DetailedHotelActivity" />
-        <activity android:name=".userinterface.DetailedAttractionsActivity"></activity>
+        <activity android:name=".userinterface.DetailedAttractionsActivity"/>
     </application>
 
 </manifest>

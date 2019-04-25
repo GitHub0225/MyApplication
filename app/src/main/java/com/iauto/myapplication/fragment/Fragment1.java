@@ -1,5 +1,8 @@
 package com.iauto.myapplication.fragment;
-
+/**
+ * created by {Paul}
+ * on 19-4-25
+ */
 import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,11 +15,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-
 import com.iauto.myapplication.R;
 import com.iauto.myapplication.other.SurroundingInfo;
 import com.iauto.myapplication.userinterface.addActivity;
-
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.InputStreamReader;
@@ -69,6 +70,7 @@ public class Fragment1 extends Fragment {
                 initThread(content);
                 //将获取到的值进行定位
                 setView();
+                //系统开启创建Fragment1时候即发送消息,生成选中地的酒店景点信息保存在单例类的链表中.
                 surroundingInfo.getInfo(editText1.getText().toString(),"酒店",0);
                 surroundingInfo.getInfo(editText1.getText().toString(),"景点",0);
 

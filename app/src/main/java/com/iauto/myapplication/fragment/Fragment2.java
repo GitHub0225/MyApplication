@@ -1,5 +1,8 @@
 package com.iauto.myapplication.fragment;
-
+/**
+ * created by {Paul}
+ * on 19-4-25
+ */
 import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.graphics.Point;
@@ -7,7 +10,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.baidu.location.BDAbstractLocationListener;
 import com.baidu.location.BDLocation;
 import com.baidu.location.LocationClient;
@@ -41,14 +43,14 @@ public class Fragment2 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         System.out.println("=========================================================================");
-                                                    View view = inflater.inflate(R.layout.layout2, container, false);
+        View view = inflater.inflate(R.layout.layout2, container, false);
         mMapView = view.findViewById(R.id.mapView);
         mBaiduMap = mMapView.getMap();
         mBaiduMap.setMyLocationEnabled(true);
         mSearch = RoutePlanSearch.newInstance();
 
         //实例化UiSettings类对象
-        //通过设置enable为true或false 选 择是否显示指南针
+        //通过设置enable为true或false 选择是否显示指南针
         //定位初始化
         mMapView.showZoomControls(true);
         //通过LocationClientOption设置LocationClient相关参数
@@ -69,7 +71,7 @@ public class Fragment2 extends Fragment {
         //路线规划模块
         mSearch.setOnGetRoutePlanResultListener(listener);
         PlanNode stNode = PlanNode.withCityNameAndPlaceName("上海", "新华联大厦");
-        PlanNode enNode = PlanNode.withCityNameAndPlaceName("上海", "东方明珠");
+        PlanNode enNode = PlanNode.withCityNameAndPlaceName("上海", "罗南新村");
         mSearch.drivingSearch((new DrivingRoutePlanOption())
                 .from(stNode)
                 .to(enNode));
@@ -92,11 +94,11 @@ public class Fragment2 extends Fragment {
             LatLng ll = new LatLng(location.getLatitude(), location.getLongitude());
             MapStatus.Builder builder = new MapStatus.Builder();
 
-            builder.zoom(18).target(ll).targetScreen(new Point(540,960));
+            builder.zoom(18).target(ll).targetScreen(new Point(540, 960));
             mBaiduMap.setMyLocationData(locData);
             mBaiduMap.animateMapStatus(MapStatusUpdateFactory.newMapStatus(builder.build()));
 //            //显示定位
-            System.out.println(location.getLatitude()+"---"+location.getLongitude());
+            System.out.println(location.getLatitude() + "---" + location.getLongitude());
         }
     }
 
@@ -107,24 +109,27 @@ public class Fragment2 extends Fragment {
 
     public Fragment2() {
     }
+
     @Override
     public void onResume() {
 
         mMapView.onResume();
         super.onResume();
     }
+
     @Override
-    public void onDestroyView(){
+    public void onDestroyView() {
         super.onDestroyView();
     }
+
     @Override
-    public void onDestroy(){
+    public void onDestroy() {
         mLocationClient.stop();
         mBaiduMap.setMyLocationEnabled(false);
-        mMapView.onDestroy();
-        mMapView = null;
+
         super.onDestroy();
     }
+
     OnGetRoutePlanResultListener listener = new OnGetRoutePlanResultListener() {
         @Override
         public void onGetWalkingRouteResult(WalkingRouteResult walkingRouteResult) {
@@ -145,10 +150,12 @@ public class Fragment2 extends Fragment {
         public void onGetDrivingRouteResult(DrivingRouteResult drivingRouteResult) {
             //创建DrivingRouteOverlay实例
             DrivingRouteOverlay overlay = new DrivingRouteOverlay(mBaiduMap);
+
             if (drivingRouteResult.getRouteLines().size() > 0) {
                 //获取路径规划数据,(以返回的第一条路线为例）
                 //为DrivingRouteOverlay实例设置数据
                 overlay.setData(drivingRouteResult.getRouteLines().get(0));
+
                 //在地图上绘制DrivingRouteOverlay
                 overlay.addToMap();
             }

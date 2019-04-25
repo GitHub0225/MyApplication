@@ -26,18 +26,14 @@
         android:layout_height="40dp"
         android:layout_toRightOf="@id/zhongdian"
         android:text="查找"/>
+
     <com.baidu.mapapi.map.MapView
         android:id="@+id/mapView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:clickable="true"
         android:layout_below="@id/qidian"/>
-    <!--<TextView-->
-    <!--android:id="@+id/bmapView"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="400dp"-->
-    <!--android:layout_below="@+id/qidian"-->
-    <!--android:clickable="true" />-->
+
 
 </RelativeLayout>
 

@@ -1,5 +1,8 @@
 package com.iauto.myapplication.userinterface;
-
+/**
+ * created by {Paul}
+ * on 19-4-25
+ */
 import android.app.Application;
 
 import com.baidu.mapapi.CoordType;
