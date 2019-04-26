@@ -1,0 +1,283 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:2:1-90:12
+INJECTED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:2:1-90:12
+INJECTED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:2:1-90:12
+INJECTED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:2:1-90:12
+MERGED from [com.android.support:design:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ef673737043e4ecc6a0fe37b7f0f9daa/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:appcompat-v7:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/3779f22585117baf6b47896aa4d2252e/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/wangjian/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/7a5a36b2608366244e8c7a6ed8c56173/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:transition:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/bd902e36ddfa43ec3568f5f70cf2c70c/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/be31a8c37f548d751164236082fb3d69/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/ef173a15b171d6616fd51f6a224a7d20/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/cc70660e70bc7e6b177c319666128cee/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/d6a09c9149c0739b49967a1f540e2d03/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/ff16e484ead28130535cd2c3539da511/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/f3525cac3ade9b79e749f71eb9bad52c/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/605c58c714d81a26c4d30f19a751e1ea/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/9a86a9cd6611b7a18c826430bb32cdf8/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/96052333da1a59af7eff24618c9fd00d/AndroidManifest.xml:17:1-31:12
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/c0f9b11b25c543e79812e2248fd15876/AndroidManifest.xml:17:1-30:12
+INJECTED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:2:1-90:12
+INJECTED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:2:1-90:12
+INJECTED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:2:1-90:12
+	package
+		ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:4:5-38
+		INJECTED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml
+		INJECTED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml
+		ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:2:1-90:12
+		INJECTED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:3:5-51
+	android:versionCode
+		INJECTED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml
+		ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:2:1-90:12
+		INJECTED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:6:5-67
+	android:name
+		ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:6:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:8:5-79
+	android:name
+		ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:8:22-76
+uses-permission#android.permission.CHANGE_WIFI_STATE
+ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:10:5-76
+	android:name
+		ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:10:22-73
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:12:5-76
+	android:name
+		ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:12:22-73
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:14:5-81
+	android:name
+		ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:14:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:16:5-80
+	android:name
+		ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:16:22-77
+uses-permission#android.permission.ACCESS_GPS
+ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:17:5-69
+	android:name
+		ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:17:22-66
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:19:5-79
+	android:name
+		ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:19:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:21:5-81
+	android:name
+		ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:21:22-78
+uses-permission#android.permission.ACCESS_LOCATION_EXTRA_COMMANDS
+ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:23:5-89
+	android:name
+		ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:23:22-86
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:29:5-75
+	android:name
+		ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:29:22-72
+uses-permission#com.android.launcher.permission.READ_SETTINGS
+ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:31:5-85
+	android:name
+		ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:31:22-82
+uses-permission#android.permission.WRITE_SETTINGS
+ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:37:5-39:47
+	tools:ignore
+		ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:39:9-44
+	android:name
+		ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:38:9-57
+uses-permission#android.permission.CAMERA
+ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:45:5-65
+	android:name
+		ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:45:22-62
+uses-permission#android.permission.WAKE_LOCK
+ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:47:5-68
+	android:name
+		ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:47:22-65
+uses-permission#android.permission.GET_ACCOUNTS
+ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:50:5-71
+	android:name
+		ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:50:22-68
+uses-permission#android.permission.READ_PROFILE
+ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:51:5-71
+	android:name
+		ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:51:22-68
+uses-permission#android.permission.READ_CONTACTS
+ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:52:5-72
+	android:name
+		ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:52:22-69
+application
+ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:54:5-88:19
+MERGED from [com.android.support:design:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ef673737043e4ecc6a0fe37b7f0f9daa/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:design:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ef673737043e4ecc6a0fe37b7f0f9daa/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/3779f22585117baf6b47896aa4d2252e/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/3779f22585117baf6b47896aa4d2252e/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/wangjian/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/7a5a36b2608366244e8c7a6ed8c56173/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/wangjian/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/7a5a36b2608366244e8c7a6ed8c56173/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:transition:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/bd902e36ddfa43ec3568f5f70cf2c70c/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:transition:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/bd902e36ddfa43ec3568f5f70cf2c70c/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-v4:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/be31a8c37f548d751164236082fb3d69/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/be31a8c37f548d751164236082fb3d69/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/ef173a15b171d6616fd51f6a224a7d20/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/ef173a15b171d6616fd51f6a224a7d20/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/cc70660e70bc7e6b177c319666128cee/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/cc70660e70bc7e6b177c319666128cee/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/d6a09c9149c0739b49967a1f540e2d03/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/d6a09c9149c0739b49967a1f540e2d03/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/ff16e484ead28130535cd2c3539da511/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/ff16e484ead28130535cd2c3539da511/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/f3525cac3ade9b79e749f71eb9bad52c/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/f3525cac3ade9b79e749f71eb9bad52c/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/605c58c714d81a26c4d30f19a751e1ea/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/605c58c714d81a26c4d30f19a751e1ea/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/9a86a9cd6611b7a18c826430bb32cdf8/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/9a86a9cd6611b7a18c826430bb32cdf8/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/96052333da1a59af7eff24618c9fd00d/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/96052333da1a59af7eff24618c9fd00d/AndroidManifest.xml:25:5-29:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/c0f9b11b25c543e79812e2248fd15876/AndroidManifest.xml:24:5-28:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/c0f9b11b25c543e79812e2248fd15876/AndroidManifest.xml:24:5-28:19
+	android:supportsRtl
+		ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:60:9-35
+	android:label
+		ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:58:9-41
+	android:roundIcon
+		ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:59:9-54
+	android:icon
+		ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:57:9-34
+	android:allowBackup
+		ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:56:9-36
+	android:theme
+		ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:61:9-40
+	android:name
+		ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:55:9-52
+meta-data#com.baidu.lbsapi.API_KEY
+ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:62:9-65:21
+	android:value
+		ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:64:13-61
+	android:name
+		ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:63:13-52
+activity#com.iauto.myapplication.userinterface.MainActivity
+ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:67:9-75:20
+	android:label
+		ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:69:13-57
+	android:name
+		ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:68:13-55
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:70:13-74:29
+action#android.intent.action.MAIN
+ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:71:17-69
+	android:name
+		ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:71:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:73:17-77
+	android:name
+		ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:73:27-74
+service#com.baidu.location.f
+ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:77:9-80:41
+	android:process
+		ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:80:13-38
+	android:enabled
+		ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:79:13-35
+	android:name
+		ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:78:13-48
+activity#com.iauto.myapplication.userinterface.LoginActivity
+ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:82:9-84:48
+	android:label
+		ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:84:13-45
+	android:name
+		ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:83:13-56
+activity#com.iauto.myapplication.userinterface.addActivity
+ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:85:9-63
+	android:name
+		ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:85:19-60
+activity#com.iauto.myapplication.userinterface.DetailedHotelActivity
+ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:86:9-73
+	android:name
+		ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:86:19-70
+activity#com.iauto.myapplication.userinterface.DetailedAttractionsActivity
+ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:87:9-78
+	android:name
+		ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml:87:19-76
+uses-sdk
+INJECTED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml
+INJECTED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:design:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ef673737043e4ecc6a0fe37b7f0f9daa/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:design:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ef673737043e4ecc6a0fe37b7f0f9daa/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/3779f22585117baf6b47896aa4d2252e/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/3779f22585117baf6b47896aa4d2252e/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/wangjian/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/7a5a36b2608366244e8c7a6ed8c56173/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/wangjian/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/7a5a36b2608366244e8c7a6ed8c56173/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:transition:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/bd902e36ddfa43ec3568f5f70cf2c70c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/bd902e36ddfa43ec3568f5f70cf2c70c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/be31a8c37f548d751164236082fb3d69/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/be31a8c37f548d751164236082fb3d69/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/ef173a15b171d6616fd51f6a224a7d20/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/ef173a15b171d6616fd51f6a224a7d20/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/cc70660e70bc7e6b177c319666128cee/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/cc70660e70bc7e6b177c319666128cee/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/d6a09c9149c0739b49967a1f540e2d03/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/d6a09c9149c0739b49967a1f540e2d03/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/ff16e484ead28130535cd2c3539da511/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/ff16e484ead28130535cd2c3539da511/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/f3525cac3ade9b79e749f71eb9bad52c/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/f3525cac3ade9b79e749f71eb9bad52c/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/605c58c714d81a26c4d30f19a751e1ea/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/605c58c714d81a26c4d30f19a751e1ea/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/9a86a9cd6611b7a18c826430bb32cdf8/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/9a86a9cd6611b7a18c826430bb32cdf8/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/96052333da1a59af7eff24618c9fd00d/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/96052333da1a59af7eff24618c9fd00d/AndroidManifest.xml:21:5-23:58
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/c0f9b11b25c543e79812e2248fd15876/AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/c0f9b11b25c543e79812e2248fd15876/AndroidManifest.xml:20:5-22:41
+INJECTED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml
+INJECTED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ef673737043e4ecc6a0fe37b7f0f9daa/AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml
+		ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml
+		INJECTED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml
+		ADDED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml
+		INJECTED from /home/wangjian/Videos/MyApplication/app/src/main/AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ef673737043e4ecc6a0fe37b7f0f9daa/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/3779f22585117baf6b47896aa4d2252e/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/3779f22585117baf6b47896aa4d2252e/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:transition:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/bd902e36ddfa43ec3568f5f70cf2c70c/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:transition:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/bd902e36ddfa43ec3568f5f70cf2c70c/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-v4:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/be31a8c37f548d751164236082fb3d69/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/be31a8c37f548d751164236082fb3d69/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/ef173a15b171d6616fd51f6a224a7d20/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/ef173a15b171d6616fd51f6a224a7d20/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/cc70660e70bc7e6b177c319666128cee/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/cc70660e70bc7e6b177c319666128cee/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/d6a09c9149c0739b49967a1f540e2d03/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/d6a09c9149c0739b49967a1f540e2d03/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/ff16e484ead28130535cd2c3539da511/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/ff16e484ead28130535cd2c3539da511/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/f3525cac3ade9b79e749f71eb9bad52c/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/f3525cac3ade9b79e749f71eb9bad52c/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/605c58c714d81a26c4d30f19a751e1ea/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/605c58c714d81a26c4d30f19a751e1ea/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/9a86a9cd6611b7a18c826430bb32cdf8/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/9a86a9cd6611b7a18c826430bb32cdf8/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/96052333da1a59af7eff24618c9fd00d/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/96052333da1a59af7eff24618c9fd00d/AndroidManifest.xml:26:9-28:38
+	android:value
+		ADDED from [com.android.support:design:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ef673737043e4ecc6a0fe37b7f0f9daa/AndroidManifest.xml:28:13-35
+	android:name
+		ADDED from [com.android.support:design:26.1.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ef673737043e4ecc6a0fe37b7f0f9daa/AndroidManifest.xml:27:13-51
+meta-data#android.arch.lifecycle.VERSION
+ADDED from [android.arch.lifecycle:runtime:1.0.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/c0f9b11b25c543e79812e2248fd15876/AndroidManifest.xml:25:9-27:47
+	android:value
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/c0f9b11b25c543e79812e2248fd15876/AndroidManifest.xml:27:13-44
+	android:name
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] /home/wangjian/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/c0f9b11b25c543e79812e2248fd15876/AndroidManifest.xml:26:13-58

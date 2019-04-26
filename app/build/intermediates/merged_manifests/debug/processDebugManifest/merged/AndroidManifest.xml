@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.iauto.myapplication"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="26"
+        android:targetSdkVersion="26" />
+    //网络链接
+    <uses-permission android:name="android.permission.INTERNET" />
+    //获取网络状态
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    //更改wifi连状态
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    //获取wifi状态
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    //读写sd卡
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    //写sd卡
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    //获取精确gps位置
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    //获取粗略位置
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    //允许程序访问额外的定位提供者指令获取模拟定位信息
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    //获取设备网络状态，禁用后无法获取网络状态
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    //网络权限，当禁用后，无法进行检索等相关业务
+    <uses-permission android:name="android.permission.INTERNET" />
+    //读取设备硬件信息，统计数据
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    //读取系统信息，包含系统版本等信息，用作统计
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    //获取设备的网络状态，鉴权所需网络代理
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    //允许sd卡写权限，需写入地图数据，禁用后无法显示地图
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    //这个权限用于进行网络定位
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    //这个权限用于访问GPS定位
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    //获取统计数据
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    //使用步行AR导航，配置Camera权限
+    <uses-permission android:name="android.permission.CAMERA" />
+    //程序在手机屏幕关闭后后台进程仍然运行
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:name="com.iauto.myapplication.userinterface.MyApplication"
+        android:allowBackup="false"
+        android:debuggable="true"
+        android:icon="@mipmap/ic"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="lSNpDevoGOQki14NNxMMICUQfgWxMWjs" >
+        </meta-data>
+
+        <activity
+            android:name="com.iauto.myapplication.userinterface.MainActivity"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- baiduMap Service -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+
+        <activity
+            android:name="com.iauto.myapplication.userinterface.LoginActivity"
+            android:label="@string/app_name" />
+        <activity android:name="com.iauto.myapplication.userinterface.addActivity" />
+        <activity android:name="com.iauto.myapplication.userinterface.DetailedHotelActivity" />
+        <activity android:name="com.iauto.myapplication.userinterface.DetailedAttractionsActivity" />
+
+        <meta-data
+            android:name="android.support.VERSION"
+            android:value="26.1.0" />
+        <meta-data
+            android:name="android.arch.lifecycle.VERSION"
+            android:value="27.0.0-SNAPSHOT" />
+    </application>
+
+</manifest>
