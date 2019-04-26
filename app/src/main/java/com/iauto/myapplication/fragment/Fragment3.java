@@ -41,8 +41,8 @@ public class Fragment3 extends Fragment {
             }
         });
         final ListView listView = (ListView) view.findViewById(R.id.list);
-        final LinkedList<String> linkedList = singleClass.getLinkedListhotel();
-        if (singleClass.getLinkedListhotel() != null) {
+        final LinkedList<String> linkedList = singleClass.getLinkedListHotel();
+        if (singleClass.getLinkedListHotel() != null) {
             try {
                 if (!linkedList.get(0).contains("(")) {
                     array = new String[]{"在此位置尚未找到酒店.请检查"};
@@ -57,7 +57,7 @@ public class Fragment3 extends Fragment {
             }
 
         }
-        if (singleClass.getLinkedListhotel() == null) {
+        if (singleClass.getLinkedListHotel() == null) {
             array = new String[]{"北京府右街宾馆", "连升商务酒店", "和家宾馆连锁(北京安贞医院店)", "北京顺义宾馆", "中油宾馆", "锦江之星酒店(北京广渠门店)", "汉庭酒店(北京前门大街店)",
                     "和家宾馆连锁(北京北四环店)", "汉庭酒店(北京西直门新店)", "锦江之星酒店(北京广安门店)", "IU酒店(北京西客站六里桥东地铁站店)", "北京军都大酒店(军都旅游度假村)", "巴比伦时尚酒店",
                     "北京角楼国际青年旅舍(天安门店)", "连升商务酒店", "和家宾馆连锁(北京安贞医院店)", "北京顺义宾馆", "中油宾馆", "锦江之星酒店(北京广渠门店)", "汉庭酒店(北京前门大街店)",
@@ -70,7 +70,7 @@ public class Fragment3 extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 if (linkedList != null) {
-                    //获取选中项名称
+                    //从字符串中筛选出酒店名称以及地址
                     String item = linkedList.get(i).split("：")[1].split("\n")[0];
                     String addr = linkedList.get(i).split("：")[3].split("\n")[0];
                     Intent intent = new Intent(getContext(), DetailedHotelActivity.class);

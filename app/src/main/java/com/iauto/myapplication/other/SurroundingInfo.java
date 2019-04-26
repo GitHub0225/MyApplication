@@ -38,8 +38,8 @@ SingleClass singleClass = SingleClass.getInstance();
                         System.out.println(p.getName());
                     }
                         //先进行置空操作保证单利类中链表数据为最新
-                        singleClass.setLinkedListhotel(null);
-                        singleClass.setLinkedListhotel(linkedListHotel);
+                        singleClass.setLinkedListHotel(null);
+                        singleClass.setLinkedListHotel(linkedListHotel);
                     }
                     if(keyword == "景点"){
 
@@ -47,7 +47,7 @@ SingleClass singleClass = SingleClass.getInstance();
                         linkedListView.add("\n景点："+p.getName()+"\n \n联系方式："+p.getPhoneNum()+"\n \n地址："+p.getAddress()+"\n"+"\n如需了解景点详情请点击此处\n");
                         System.out.println(p.getName());
                         }
-                        //先进行置空操作保证单利类中链表数据为最新
+                        //先进行置空操作保证单例类中链表数据为最新
                         singleClass.setLinkedListView(null);
                         singleClass.setLinkedListView(linkedListView);
                     }

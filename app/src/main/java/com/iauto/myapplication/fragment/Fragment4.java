@@ -38,7 +38,7 @@ public class Fragment4 extends Fragment {
         });
         final ListView listView = (ListView) view.findViewById(R.id.list);
         final LinkedList<String> linkedList = singleClass.getLinkedListView();
-        if (singleClass.getLinkedListhotel() != null) {
+        if (singleClass.getLinkedListHotel() != null) {
             try {
                 if (!linkedList.get(0).contains("(")) {
                     array = new String[]{"在此位置尚未找到景点.请检查"};
@@ -53,7 +53,7 @@ public class Fragment4 extends Fragment {
             }
 
         }
-        if (singleClass.getLinkedListhotel() == null) {
+        if (singleClass.getLinkedListHotel() == null) {
             array = new String[]{"北京府右街宾馆", "连升商务酒店", "和家宾馆连锁(北京安贞医院店)", "北京顺义宾馆", "中油宾馆", "锦江之星酒店(北京广渠门店)", "汉庭酒店(北京前门大街店)",
                     "和家宾馆连锁(北京北四环店)", "汉庭酒店(北京西直门新店)", "锦江之星酒店(北京广安门店)", "IU酒店(北京西客站六里桥东地铁站店)", "北京军都大酒店(军都旅游度假村)", "巴比伦时尚酒店",
                     "北京角楼国际青年旅舍(天安门店)", "连升商务酒店", "和家宾馆连锁(北京安贞医院店)", "北京顺义宾馆", "中油宾馆", "锦江之星酒店(北京广渠门店)", "汉庭酒店(北京前门大街店)",
