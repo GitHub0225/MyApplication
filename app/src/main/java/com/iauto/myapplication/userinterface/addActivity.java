@@ -79,6 +79,7 @@ public class addActivity extends Activity {
                 while((len=byteArrayInputStream.read(buf))!=-1){
                     outputStream.write(buf, 0, len);
                 }
+                byteArrayInputStream.close();
                 //刷新一下缓冲区的数据
                 outputStream.flush();
                 //告诉服务器，我的数据已经发送完了

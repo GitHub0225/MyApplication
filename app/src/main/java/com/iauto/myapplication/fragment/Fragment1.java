@@ -108,6 +108,8 @@ public class Fragment1 extends Fragment {
                 parts = string.split("_");
                 flag = 1;
                 System.out.println(con+"-----------------------------");
+                bufferedReader.close();
+                byteArrayInputStream.close();
             }catch (Exception e){
                 e.printStackTrace();
             }
